@@ -3,7 +3,7 @@
   font-family: "Shrikhand";
   font-style: normal;
   font-weight: 400;
-  src: local("Shrikhand"),
+  src: local(""),
     url("/dist/assets/fonts/shrikhand-v9-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("/dist/assets/fonts/shrikhand-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -13,7 +13,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto"),
+  src: local(""),
     url("/dist/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("/dist/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -23,7 +23,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: local("Roboto"),
+  src: local(""),
     url("/dist/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("/dist/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -166,11 +166,29 @@ body {
 #restaurants {
   background: #f6f6f6;
   padding: 5vw 3vw;
+  li:nth-child(2) .article__img {
+    object-position: 50% 61%;
+  }
   article {
     margin: 3vw 0;
     background: #fff;
     border-radius: 3vw;
+    .img {
+      display: flex;
+      align-items: start;
+      span {
+        color: #008766;
+        font-size: 3.5vw;
+        font-weight: bold;
+        background: $tertiary;
+        border-radius: 3px;
+        margin-top: 3vw;
+        margin-left: -180px;
+        padding: 2vw 3vw;
+      }
+    }
     .article__img {
+      object-position: right 100%;
       width: 100%;
       aspect-ratio: 2 / 1;
       border-radius: 3vw 3vw 0 0;
