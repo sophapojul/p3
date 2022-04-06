@@ -25,4 +25,4 @@ npm-debug.log*
 *.sass.map
 *.scss.map
 
-dist/images/.DS_Store
+.cache/

@@ -1,0 +1,226 @@
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Shrikhand"),
+    url("/dist/assets/fonts/shrikhand-v9-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/dist/assets/fonts/shrikhand-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"),
+    url("/dist/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/dist/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"),
+    url("/dist/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/dist/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", serif;
+  font-size: 2vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 5vw;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/* HEADER */
+.page-header {
+  .logo {
+    margin: auto;
+    text-align: center;
+    line-height: 20vmin;
+    font-family: "Shrikhand";
+    font-size: 10vmin;
+  }
+}
+/* BODY */
+.section__header {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5vw;
+  text-align: center;
+  background: #f6f6f6;
+  .header__form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 3vw;
+    padding: 3vw;
+    background: #e6e6e6;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
+    .header__input {
+      border: none;
+      background: none;
+    }
+    .fa-location-dot {
+      padding-right: 2vw;
+    }
+  }
+  .header__content {
+    margin: 3vw;
+    .header__paragraph {
+      font-size: 3vw;
+      opacity: 0.6;
+    }
+    .header__button {
+      border-radius: 3rem;
+      border: none;
+      line-height: 3vw;
+      padding: 2vw;
+      background: linear-gradient($secondary, $primary);
+      span {
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+#fonctionnement {
+  padding: 5vw;
+  ol {
+    padding: 0;
+    counter-reset: li;
+    li {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 0 0 2vw 0;
+      padding: 4px 8px;
+      list-style: none;
+      &:last-child article i {
+        background-color: #f6f6f6;
+        color: $primary;
+      }
+      &::before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        top: 4vw;
+        left: 2vmin;
+        line-height: 5vmin;
+        width: 5vmin;
+        height: 5vmin;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        color: #fff;
+        background: $primary;
+      }
+      article {
+        flex-basis: auto;
+        padding-left: 2em;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        width: 95%;
+        margin: auto;
+        color: rgba(0, 0, 0, 0.66);
+        background: #f6f6f6;
+        border-radius: 20px;
+        box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
+        font-size: 3vw;
+      }
+    }
+  }
+}
+#restaurants {
+  background: #f6f6f6;
+  padding: 5vw 3vw;
+  article {
+    margin: 3vw 0;
+    background: #fff;
+    border-radius: 3vw;
+    .article__img {
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      border-radius: 3vw 3vw 0 0;
+    }
+    .article__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3vw;
+      font-size: 3vw;
+      span {
+        opacity: 0.5;
+      }
+      .fa-heart {
+        -webkit-text-stroke-width: 0.4vw;
+        -webkit-text-stroke-color: black;
+        color: transparent;
+        background-image: none;
+        transition: background-image 2s;
+      }
+      .fa-heart:hover {
+        background-image: linear-gradient($primary, $secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+  }
+}
+/* FOOTER */
+.page-footer {
+  padding: 3vmin;
+  font-size: 4vmin;
+  color: #fff;
+  background-color: #353535;
+  .page-footer__title {
+    font-size: 4vmin;
+    font-family: "Shrikhand", serif;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      padding: 0.3em 0;
+      a {
+        text-decoration: none;
+        color: #fff;
+        i {
+          margin-right: 0.7em;
+        }
+      }
+    }
+  }
+}
