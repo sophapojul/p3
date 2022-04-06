@@ -6,10 +6,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
+    <header class="page-header">
+        <div class="logo">ohmyfood</div>
+    </header>
+    <main class="main">
+        <section class="section__header">
+            <form class="header__form" action="" role="search"><i class="fa-solid fa-location-dot fa-1x"></i><input
+                    class="header__input" type="search" id="localisation" name="q" placeholder="localisation..."
+                    value="Paris, Belleville">
+            </form>
+            <div class="header__content">
+                <h1 class="header__title">Réservez le menu qui vous convient</h1>
+                <p class="header__paragraph">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
+                <button class="header__button"><a href="#"><span>Explorez nos restaurants</span></a></button>
+            </div>
+        </section>
+        <section id="fonctionnement">
+            <h2>Fonctionnement
+            </h2>
+            <ol>
+                <li>
+                    <article>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>Choisissez un restaurant</h3>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <i class="fa-solid fa-list-ul"></i>
+                        <h3>Composez votre menu</h3>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Dégustez au restaurant</h3>
+                    </article>
+                </li>
+            </ol>
+        </section>
+        <section id="restaurants">
+            <h2>Restaurants</h2>
+            <ul>
+                <li>
+                    <article>
+                        <img class="article__img"
+                            src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <div class="article__content">
+                            <div class="article__text">
+                                <h3>La palette du goût</h3>
+                                <span>Ménilmontant</span>
+                            </div>
+                            <a href="#"><span class="heart"><i class="fa-solid fa-heart fa-2x"></i></span></a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img class="article__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                            alt="">
+                        <div class="article__content">
+                            <div class="article__text">
+                                <h3>La note enchantée</h3>
+                                <span>Charonne</span>
+                            </div>
+                            <a href="#"><span class="heart"><i class="fa-solid fa-heart fa-2x"></i></span></a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img class="article__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="">
+                        <div class="article__content">
+                            <div class="article__text">
+                                <h3>À la française</h3>
+                                <span>Cité Rouge</span>
+                            </div>
+                            <a href="#"><span class="heart"><i class="fa-solid fa-heart fa-2x"></i></span></a>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img class="article__img"
+                            src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                        <div class="article__content">
+                            <div class="article__text">
+                                <h3>Le délice des sens</h3>
+                                <span>Folie-Méricourt</span>
+                            </div>
+                            <div class="article__heart">
+                                <a href="#"><span class="heart"><i class="fa-solid fa-heart fa-2x"></i></span></a>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <h2 class="page-footer__title">ohmyfood</h2>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-utensils"></i><span>Proposer un restaurant</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle fa-xs"></i><span>Devenir partenaire</span></a></li>
+            <li><a href="#"><span>Mentions légales</span></a></li>
+            <li><a href="#"><span>Contact</span></a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
