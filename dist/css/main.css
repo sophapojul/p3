@@ -62,13 +62,6 @@ a {
 }
 
 /* BODY */
-.icon-png {
-  height: 3rem;
-  width: 3rem;
-  color: red;
-  aspect-ratio: 1/1;
-}
-
 .section__header {
   flex-grow: 1;
   display: flex;
@@ -113,103 +106,110 @@ a {
 #fonctionnement {
   padding: 5vw;
 }
-#fonctionnement ol {
+#fonctionnement .function-list {
   padding: 0;
   counter-reset: li;
 }
-#fonctionnement ol li {
-  display: flex;
-  flex-direction: column;
+#fonctionnement .function-list .function-item {
   position: relative;
-  margin: 0 0 2vw 0;
-  padding: 4px 8px;
+  display: grid;
+  grid-template-columns: repeat(2, auto-fit);
+  align-items: center;
   list-style: none;
 }
-#fonctionnement ol li:last-child article i {
+#fonctionnement .function-list .function-item:last-child .function i {
   background-color: #f6f6f6;
   color: #9356dc;
 }
-#fonctionnement ol li::before {
+#fonctionnement .function-list .function-item::before {
   content: counter(li);
   counter-increment: li;
   position: absolute;
-  top: 4vw;
-  left: 2vmin;
   line-height: 5vmin;
   width: 5vmin;
   height: 5vmin;
+  left: -2.5vmin;
   text-align: center;
   font-weight: bold;
   border-radius: 2em;
   color: #fff;
   background: #9356dc;
 }
-#fonctionnement ol li article {
-  flex-basis: auto;
+#fonctionnement .function-list .function-item .function {
+  align-self: start;
   padding-left: 2em;
   display: flex;
   align-items: center;
   gap: 1em;
-  width: 95%;
+  width: 100%;
   margin: auto;
+  padding-right: 1rem;
   color: rgba(0, 0, 0, 0.66);
   background: #f6f6f6;
   border-radius: 20px;
   box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-#restaurants {
+.grid-col-span-2 {
   background: #f6f6f6;
   padding: 5vw 3vw;
 }
-#restaurants li:nth-child(2) .article__img {
+.grid-col-span-2 li:nth-child(2) .article__img {
   object-position: 50% 61%;
 }
-#restaurants article {
+.grid-col-span-2 article {
   margin: 3vw 0;
   background: #fff;
-  border-radius: 3vw;
+  border-radius: 2vw;
 }
-#restaurants article .img {
-  display: flex;
-  align-items: start;
+.grid-col-span-2 article .nouveau {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
 }
-#restaurants article .img span {
+.grid-col-span-2 article .nouveau .new {
   color: #008766;
   font-weight: bold;
   background: #99e2d0;
   border-radius: 0.5vw;
-  margin-top: 3vw;
-  margin-left: -25vw;
-  padding: 2vw 3vw;
+  align-self: start;
+  justify-self: end;
+  font-size: 2.5vw;
+  margin: 0.5rem;
+  padding: 0.4rem 0.5rem;
 }
-#restaurants article .article__img {
+.grid-col-span-2 article .nouveau .article__img,
+.grid-col-span-2 article .nouveau .new {
+  grid-column: 1;
+  grid-row: 1;
+}
+.grid-col-span-2 article .article__img {
   object-position: right 100%;
   width: 100%;
   aspect-ratio: 2/1;
-  border-radius: 3vw 3vw 0 0;
+  border-radius: 2vw 2vw 0 0;
 }
-#restaurants article .article__content {
+.grid-col-span-2 article .article__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3vw;
 }
-#restaurants article .article__content .heart {
+.grid-col-span-2 article .article__content .heart {
   fill: transparent;
   stroke: black;
   opacity: 0.5;
   stroke-width: 30;
   cursor: pointer;
 }
-#restaurants article .article__content .heart svg {
+.grid-col-span-2 article .article__content .heart svg {
   overflow: visible;
-  width: 3rem;
+  width: 2rem;
 }
-#restaurants article .article__content .heart:hover {
+.grid-col-span-2 article .article__content .heart:hover {
   opacity: 1;
 }
-#restaurants article .article__content .heart:hover path {
+.grid-col-span-2 article .article__content .heart:hover path {
   fill: url(#FillGradient);
   stroke: none;
 }
@@ -241,6 +241,53 @@ a {
 @media screen and (min-width: 320px) {
   html {
     font-size: clamp(100%, 1rem + 2vw, 24px);
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .grid-col-span-3 {
+    grid-column: span 3;
+  }
+  main .grid-col-span-2 {
+    padding: 1rem;
+    grid-column: span 2;
+  }
+  main .grid-col-span-2 .new {
+    font-size: 1vw !important;
+  }
+  main .restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+  }
+
+  #fonctionnement {
+    grid-column: 1;
+    padding: 1rem;
+  }
+  #fonctionnement h3 {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .page-footer h2 {
+    text-align: center;
+  }
+  .page-footer ul {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    row-gap: 1rem;
+    justify-content: space-around;
+  }
+  .page-footer ul li {
+    justify-self: center;
+  }
+  .page-footer ul li:nth-child(2) {
+    grid-row: 2/3;
   }
 }
 

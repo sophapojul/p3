@@ -68,14 +68,7 @@ a {
   }
 }
 /* BODY */
-.icon-png {
-  // opacity: 0.6;
-  height: 3rem;
-  width: 3rem;
-  color: red;
 
-  aspect-ratio: 1 / 1;
-}
 .section__header {
   flex-grow: 1;
   display: flex;
@@ -118,17 +111,16 @@ a {
 }
 #fonctionnement {
   padding: 5vw;
-  ol {
+  .function-list {
     padding: 0;
     counter-reset: li;
-    li {
-      display: flex;
-      flex-direction: column;
+    .function-item {
       position: relative;
-      margin: 0 0 2vw 0;
-      padding: 4px 8px;
+      display: grid;
+      grid-template-columns: repeat(2, auto-fit);
+      align-items: center;
       list-style: none;
-      &:last-child article i {
+      &:last-child .function i {
         background-color: #f6f6f6;
         color: $primary;
       }
@@ -136,25 +128,25 @@ a {
         content: counter(li);
         counter-increment: li;
         position: absolute;
-        top: 4vw;
-        left: 2vmin;
         line-height: 5vmin;
         width: 5vmin;
         height: 5vmin;
+        left: -2.5vmin;
         text-align: center;
         font-weight: bold;
         border-radius: 2em;
         color: #fff;
         background: $primary;
       }
-      article {
-        flex-basis: auto;
+      .function {
+        align-self: start;
         padding-left: 2em;
         display: flex;
         align-items: center;
         gap: 1em;
-        width: 95%;
+        width: 100%;
         margin: auto;
+        padding-right: 1rem;
         color: rgba(0, 0, 0, 0.66);
         background: #f6f6f6;
         border-radius: 20px;
@@ -163,7 +155,7 @@ a {
     }
   }
 }
-#restaurants {
+.grid-col-span-2 {
   background: #f6f6f6;
   padding: 5vw 3vw;
   li:nth-child(2) .article__img {
@@ -172,25 +164,33 @@ a {
   article {
     margin: 3vw 0;
     background: #fff;
-    border-radius: 3vw;
-    .img {
-      display: flex;
-      align-items: start;
-      span {
+    border-radius: 2vw;
+    .nouveau {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      .new {
         color: #008766;
         font-weight: bold;
         background: $tertiary;
         border-radius: 0.5vw;
-        margin-top: 3vw;
-        margin-left: -25vw;
-        padding: 2vw 3vw;
+        align-self: start;
+        justify-self: end;
+        font-size: 2.5vw;
+        margin: 0.5rem;
+        padding: 0.4rem 0.5rem;
+      }
+      .article__img,
+      .new {
+        grid-column: 1;
+        grid-row: 1;
       }
     }
     .article__img {
       object-position: right 100%;
       width: 100%;
       aspect-ratio: 2 / 1;
-      border-radius: 3vw 3vw 0 0;
+      border-radius: 2vw 2vw 0 0;
     }
     .article__content {
       display: flex;
@@ -206,7 +206,7 @@ a {
 
         svg {
           overflow: visible;
-          width: 3rem;
+          width: 2rem;
         }
         &:hover {
           opacity: 1;
@@ -246,5 +246,52 @@ a {
 @media screen and (min-width: 320px) {
   html {
     font-size: clamp(100%, 1rem + 2vw, 24px);
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    .grid-col-span-3 {
+      grid-column: span 3;
+    }
+    .grid-col-span-2 {
+      padding: 1rem;
+      grid-column: span 2;
+      .new {
+        font-size: 1vw !important;
+      }
+    }
+    .restaurant-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+  #fonctionnement {
+    grid-column: 1;
+    padding: 1rem;
+    h3 {
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+  }
+  .page-footer {
+    h2 {
+      text-align: center;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      row-gap: 1rem;
+      justify-content: space-around;
+      li {
+        justify-self: center;
+        &:nth-child(2) {
+          grid-row: 2 / 3;
+        }
+      }
+    }
   }
 }
