@@ -29,27 +29,26 @@
 }
 
 body {
-  padding: 0;
   margin: 0;
   font-family: "Roboto", serif;
-  font-size: 2vw;
+  font-size: clamp(100%, 1rem + 2vw, 24px);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-body h2 {
-  font-size: 5vw;
-}
-body img {
+
+img {
   display: block;
   max-width: 100%;
   object-fit: cover;
 }
-body ul {
+
+ul {
   list-style-type: none;
   padding: 0;
 }
-body a {
+
+a {
   text-decoration: none;
 }
 
@@ -59,10 +58,17 @@ body a {
   text-align: center;
   line-height: 20vmin;
   font-family: "Shrikhand";
-  font-size: 10vmin;
+  font-size: 2.2rem;
 }
 
 /* BODY */
+.icon-png {
+  height: 3rem;
+  width: 3rem;
+  color: red;
+  aspect-ratio: 1/1;
+}
+
 .section__header {
   flex-grow: 1;
   display: flex;
@@ -76,7 +82,6 @@ body a {
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 3vw;
   padding: 3vw;
   background: #e6e6e6;
   box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -92,13 +97,11 @@ body a {
   margin: 3vw;
 }
 .section__header .header__content .header__paragraph {
-  font-size: 3vw;
   opacity: 0.6;
 }
 .section__header .header__content .header__button {
   border-radius: 3rem;
   border: none;
-  line-height: 3vw;
   padding: 2vw;
   background: linear-gradient(#ff79da, #9356dc);
 }
@@ -153,7 +156,6 @@ body a {
   background: #f6f6f6;
   border-radius: 20px;
   box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
-  font-size: 3vw;
 }
 
 #restaurants {
@@ -174,7 +176,6 @@ body a {
 }
 #restaurants article .img span {
   color: #008766;
-  font-size: 3.5vw;
   font-weight: bold;
   background: #99e2d0;
   border-radius: 0.5vw;
@@ -193,33 +194,33 @@ body a {
   justify-content: space-between;
   align-items: center;
   padding: 3vw;
-  font-size: 3vw;
-}
-#restaurants article .article__content span {
-  opacity: 0.5;
 }
 #restaurants article .article__content .heart {
-  display: inline;
-  transition: background 2s;
-  background: none;
+  fill: transparent;
+  stroke: black;
+  opacity: 0.5;
+  stroke-width: 30;
+  cursor: pointer;
 }
-#restaurants article .article__content .fa-heart:hover {
-  background: linear-gradient(to left bottom, #9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  display: initial;
+#restaurants article .article__content .heart svg {
+  overflow: visible;
+  width: 3rem;
+}
+#restaurants article .article__content .heart:hover {
+  opacity: 1;
+}
+#restaurants article .article__content .heart:hover path {
+  fill: url(#FillGradient);
+  stroke: none;
 }
 
 /* FOOTER */
 .page-footer {
   padding: 3vmin;
-  font-size: 4vmin;
   color: #fff;
   background-color: #353535;
 }
 .page-footer .page-footer__title {
-  font-size: 4vmin;
   font-family: "Shrikhand", serif;
 }
 .page-footer ul {
@@ -235,6 +236,12 @@ body a {
 }
 .page-footer ul li a i {
   margin-right: 0.7em;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: clamp(100%, 1rem + 2vw, 24px);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
