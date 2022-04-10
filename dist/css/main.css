@@ -81,10 +81,12 @@ a {
 }
 .section__header .header__form .header__input {
   border: none;
+  outline: none;
   background: none;
 }
 .section__header .header__form .fa-location-dot {
-  padding-right: 2vw;
+  padding: 0 2vw;
+  cursor: pointer;
 }
 .section__header .header__content {
   margin: 3vw;
@@ -97,6 +99,11 @@ a {
   border: none;
   padding: 2vw;
   background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.section__header .header__content .header__button:hover {
+  opacity: 0.85;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
 }
 .section__header .header__content .header__button span {
   color: white;
@@ -107,7 +114,7 @@ a {
   padding: 5vw;
 }
 #fonctionnement .function-list {
-  padding: 0;
+  padding: 0 0.5rem;
   counter-reset: li;
 }
 #fonctionnement .function-list .function-item {
@@ -116,6 +123,7 @@ a {
   grid-template-columns: repeat(2, auto-fit);
   align-items: center;
   list-style: none;
+  margin: 1rem 0;
 }
 #fonctionnement .function-list .function-item:last-child .function i {
   background-color: #f6f6f6;
@@ -148,6 +156,11 @@ a {
   background: #f6f6f6;
   border-radius: 20px;
   box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.8s;
+}
+#fonctionnement .function-list .function-item .function:hover {
+  background: rgba(231, 182, 225, 0.1);
+  box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
 }
 
 .grid-col-span-2 {

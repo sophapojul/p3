@@ -86,10 +86,12 @@ a {
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
     .header__input {
       border: none;
+      outline: none;
       background: none;
     }
     .fa-location-dot {
-      padding-right: 2vw;
+      padding: 0 2vw;
+      cursor: pointer;
     }
   }
   .header__content {
@@ -102,6 +104,11 @@ a {
       border: none;
       padding: 2vw;
       background: linear-gradient($secondary, $primary);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+      &:hover {
+        opacity: 0.85;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
+      }
       span {
         color: white;
         font-weight: bold;
@@ -112,7 +119,7 @@ a {
 #fonctionnement {
   padding: 5vw;
   .function-list {
-    padding: 0;
+    padding: 0 0.5rem;
     counter-reset: li;
     .function-item {
       position: relative;
@@ -120,6 +127,7 @@ a {
       grid-template-columns: repeat(2, auto-fit);
       align-items: center;
       list-style: none;
+      margin: 1rem 0;
       &:last-child .function i {
         background-color: #f6f6f6;
         color: $primary;
@@ -151,6 +159,11 @@ a {
         background: #f6f6f6;
         border-radius: 20px;
         box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.8s;
+        &:hover {
+          background: rgba(231, 182, 225, 0.1);
+          box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
+        }
       }
     }
   }
