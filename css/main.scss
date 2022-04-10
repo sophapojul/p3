@@ -296,20 +296,20 @@ a {
     #restaurants {
       grid-column: span 2;
       padding-left: 0;
+      .restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 1rem;
+      }
     }
-    .restaurant-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      grid-gap: 1rem;
-    }
-  }
-  #fonctionnement {
-    background: #f6f6f6;
-    grid-column: 1;
-    padding-right: 0;
-    h3 {
-      // font-size: 1rem;
-      white-space: nowrap;
+    #fonctionnement {
+      background: #f6f6f6;
+      grid-column: 1;
+      padding-right: 0;
+      h3 {
+        // font-size: 1rem;
+        white-space: nowrap;
+      }
     }
   }
   .page-footer {
