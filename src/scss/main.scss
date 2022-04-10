@@ -37,12 +37,23 @@ $tertiary: #99e2d0;
   box-sizing: border-box;
 }
 body {
-  margin: 0;
   font-family: "Roboto", serif;
-  font-size: clamp(100%, 1rem + 2vw, 24px);
+  font-size: 16px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+h1 {
+  font-size: clamp(1rem, 1rem + 3vw, 3rem);
+}
+h2 {
+  font-size: clamp(1rem, 0.9rem + 2vw, 2rem);
+}
+h3 {
+  font-size: clamp(0.9rem, 0.8rem + 1vw, 1.5rem);
+}
+p {
+  font-size: clamp(0.9rem, 0.8rem + 2vw, 2rem);
 }
 img {
   display: block;
@@ -60,11 +71,11 @@ a {
 /* HEADER */
 .page-header {
   .logo {
-    margin: auto;
+    margin: 20px auto 0;
     text-align: center;
-    line-height: 20vmin;
+    line-height: 1.6;
     font-family: "Shrikhand";
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 1rem + 5vw, 6rem);
   }
 }
 /* BODY */
@@ -74,35 +85,39 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 5vw;
+  padding-bottom: 20px;
   text-align: center;
   background: #f6f6f6;
   .header__form {
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding: 3vw;
+    width: clamp(100px, 1px + 100vw, 900px);
+    padding: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
     background: #e6e6e6;
     box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
     .header__input {
+      font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
       border: none;
       outline: none;
       background: none;
     }
     .fa-location-dot {
-      padding: 0 2vw;
+      font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+      padding: 0 15px;
       cursor: pointer;
     }
   }
   .header__content {
-    margin: 3vw;
+    margin: 15px;
     .header__paragraph {
       opacity: 0.6;
     }
     .header__button {
+      margin: 1rem;
       border-radius: 3rem;
       border: none;
-      padding: 2vw;
+      padding: clamp(0.8rem, 0.7rem + 1vw, 1.5rem)
+        clamp(0.7rem, 0.6rem + 1vw, 1.7rem);
       background: linear-gradient($secondary, $primary);
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
       &:hover {
@@ -112,14 +127,15 @@ a {
       span {
         color: white;
         font-weight: bold;
+        font-size: clamp(1rem, 0.8rem + 1vw, 1.7rem);
       }
     }
   }
 }
 #fonctionnement {
-  padding: 5vw;
+  padding: clamp(0.5rem, 0.4rem + 2vw, 2.2rem);
   .function-list {
-    padding: 0 0.5rem;
+    padding: 0 clamp(0.5rem, 0.4rem + 1vw, 1.5rem);
     counter-reset: li;
     .function-item {
       position: relative;
@@ -136,10 +152,10 @@ a {
         content: counter(li);
         counter-increment: li;
         position: absolute;
-        line-height: 5vmin;
-        width: 5vmin;
-        height: 5vmin;
-        left: -2.5vmin;
+        line-height: clamp(1rem, 1rem + 1vw, 2rem);
+        width: clamp(1rem, 1rem + 1vw, 2rem);
+        height: clamp(1rem, 1rem + 1vw, 2rem);
+        left: clamp(-1rem, -0.5rem - 0.5vw, -0.5rem);
         text-align: center;
         font-weight: bold;
         border-radius: 2em;
@@ -148,13 +164,13 @@ a {
       }
       .function {
         align-self: start;
-        padding-left: 2em;
         display: flex;
         align-items: center;
-        gap: 1em;
+        gap: clamp(0.8rem, 0.7rem + 1vw, 2rem);
         width: 100%;
         margin: auto;
-        padding-right: 1rem;
+        padding-left: clamp(0.8rem, 0.8rem + 2vw, 2rem);
+        padding-right: clamp(0.5rem, 0.5rem + 1vw, 1rem);
         color: rgba(0, 0, 0, 0.66);
         background: #f6f6f6;
         border-radius: 20px;
@@ -168,16 +184,16 @@ a {
     }
   }
 }
-.grid-col-span-2 {
+#restaurants {
   background: #f6f6f6;
-  padding: 5vw 3vw;
+  padding: clamp(0.5rem, 0.4rem + 2vw, 2.2rem);
   li:nth-child(2) .article__img {
     object-position: 50% 61%;
   }
   article {
-    margin: 3vw 0;
+    margin: 20px 0;
     background: #fff;
-    border-radius: 2vw;
+    border-radius: 1rem;
     .nouveau {
       display: grid;
       grid-template-columns: 1fr;
@@ -186,12 +202,13 @@ a {
         color: #008766;
         font-weight: bold;
         background: $tertiary;
-        border-radius: 0.5vw;
+        border-radius: 0.3rem;
         align-self: start;
         justify-self: end;
-        font-size: 2.5vw;
-        margin: 0.5rem;
-        padding: 0.4rem 0.5rem;
+        font-size: clamp(0.4rem, 0.4rem + 1.5vw, 1.5rem);
+        margin: clamp(0.4rem, 0.3rem + 1.2vw, 1.2rem);
+        padding: clamp(0.4rem, 0.2rem + 1vw, 0.7rem)
+          clamp(0.3rem, 0.5rem + 0.7vw, 1rem);
       }
       .article__img,
       .new {
@@ -203,29 +220,35 @@ a {
       object-position: right 100%;
       width: 100%;
       aspect-ratio: 2 / 1;
-      border-radius: 2vw 2vw 0 0;
+      border-radius: 1rem 1rem 0 0;
     }
     .article__content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 3vw;
+      gap: 5px;
+      padding: clamp(0.5rem, 0.5rem + 1vw, 2rem);
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+      span {
+        font-size: clamp(0.9rem, 0.7rem + 1vw, 1.4rem);
+      }
       .heart {
-        fill: transparent;
         stroke: black;
         opacity: 0.5;
         stroke-width: 30;
         cursor: pointer;
-
+        padding: 8px;
         svg {
           overflow: visible;
-          width: 2rem;
+          width: clamp(1rem, 0.8rem + 3vw, 2.5rem);
         }
         &:hover {
           opacity: 1;
-          path {
-            fill: url(#FillGradient);
+          #heart {
             stroke: none;
+            fill: url(#FillGradient);
           }
         }
       }
@@ -240,41 +263,39 @@ a {
   background-color: #353535;
   .page-footer__title {
     font-family: "Shrikhand", serif;
+    font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
   }
   ul {
     list-style-type: none;
     padding: 0;
     li {
-      padding: 0.3em 0;
+      padding: clamp(0.3rem, 0.2rem + 1vw, 0.8rem) 0;
       a {
         text-decoration: none;
         color: #fff;
         i {
-          margin-right: 0.7em;
+          margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
+        }
+        span {
+          font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
         }
       }
     }
   }
 }
-@media screen and (min-width: 320px) {
-  html {
-    font-size: clamp(100%, 1rem + 2vw, 24px);
-  }
-}
 @media screen and (min-width: 992px) {
   main {
     display: grid;
-    gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 0;
     grid-template-columns: repeat(3, 1fr);
+    background: #f6f6f6;
     .grid-col-span-3 {
       grid-column: span 3;
     }
-    .grid-col-span-2 {
-      padding: 1rem;
+    #restaurants {
       grid-column: span 2;
-      .new {
-        font-size: 1vw !important;
-      }
+      padding-left: 0;
     }
     .restaurant-list {
       display: grid;
@@ -283,10 +304,11 @@ a {
     }
   }
   #fonctionnement {
+    background: #f6f6f6;
     grid-column: 1;
-    padding: 1rem;
+    padding-right: 0;
     h3 {
-      font-size: 1rem;
+      // font-size: 1rem;
       white-space: nowrap;
     }
   }
