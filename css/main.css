@@ -37,19 +37,16 @@ body {
 }
 
 h1 {
-  font-size: clamp(1rem, 1rem + 3vw, 3rem);
+  font-size: clamp(1rem, 1rem + 2vw, 2rem);
 }
 
 h2 {
-  font-size: clamp(1rem, 0.9rem + 2vw, 2rem);
+  font-size: clamp(1rem, 0.9rem + 2vw, 1.8rem);
 }
 
-h3 {
-  font-size: clamp(0.9rem, 0.8rem + 1vw, 1.5rem);
-}
-
+h3,
 p {
-  font-size: clamp(0.9rem, 0.8rem + 2vw, 2rem);
+  font-size: clamp(0.9rem, 0.8rem + 1vw, 1.5rem);
 }
 
 img {
@@ -126,7 +123,7 @@ a {
 .section__header .header__content .header__button span {
   color: white;
   font-weight: bold;
-  font-size: clamp(1rem, 0.8rem + 1vw, 1.7rem);
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.3rem);
 }
 
 #fonctionnement {
@@ -169,7 +166,7 @@ a {
   width: 100%;
   margin: auto;
   padding-left: clamp(0.8rem, 0.8rem + 2vw, 2rem);
-  padding-right: clamp(0.5rem, 0.5rem + 1vw, 1rem);
+  padding-right: clamp(0.5rem, 0.5rem + 1vw, 0.5rem);
   color: rgba(0, 0, 0, 0.66);
   background: #f6f6f6;
   border-radius: 20px;
@@ -182,6 +179,10 @@ a {
 }
 #fonctionnement .function-list .function-item .function:hover i {
   color: #9356dc;
+}
+#fonctionnement .function-list .function-item .function p {
+  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.3rem);
+  font-weight: bold;
 }
 
 #restaurants {
@@ -278,6 +279,12 @@ a {
 }
 .page-footer ul li a i {
   margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
+}
+.page-footer ul li a .fa-xs {
+  font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1.3rem);
+}
+.page-footer ul li a .fa-utensils {
+  font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem);
 }
 .page-footer ul li a span {
   font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
