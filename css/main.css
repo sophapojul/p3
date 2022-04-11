@@ -146,7 +146,6 @@ a {
 }
 #fonctionnement .function-list .function-item:last-child .function i {
   background-color: #f6f6f6;
-  color: #9356dc;
 }
 #fonctionnement .function-list .function-item::before {
   content: counter(li);
@@ -180,6 +179,9 @@ a {
 #fonctionnement .function-list .function-item .function:hover {
   background: rgba(231, 182, 225, 0.1);
   box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
+}
+#fonctionnement .function-list .function-item .function:hover i {
+  color: #9356dc;
 }
 
 #restaurants {
