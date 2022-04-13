@@ -34,6 +34,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 h1 {
@@ -85,17 +86,20 @@ a {
 }
 .section__header .header__form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: clamp(100px, 1px + 100vw, 900px);
-  padding: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
-  background: #e6e6e6;
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.section__header .header__form .header__input {
+.section__header .header__form .form__input {
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: #eaeaea;
+}
+.section__header .header__form .form__input .header__input {
   font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
   border: none;
   outline: none;
   background: none;
+  padding: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
 }
 .section__header .header__form .fa-location-dot {
   font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
@@ -119,6 +123,7 @@ a {
 .section__header .header__content .header__button:active, .section__header .header__content .header__button:hover {
   opacity: 0.85;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
+  cursor: pointer;
 }
 .section__header .header__content .header__button span {
   color: white;
@@ -136,7 +141,7 @@ a {
 #fonctionnement .function-list .function-item {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, auto-fit);
+  grid-template-columns: repeat(2, 100%);
   align-items: center;
   list-style: none;
   margin: 1rem 0;
@@ -196,6 +201,10 @@ a {
   margin: 20px 0;
   background: #fff;
   border-radius: 1rem;
+  box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+#restaurants article:hover {
+  box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
 }
 #restaurants article .nouveau {
   display: grid;

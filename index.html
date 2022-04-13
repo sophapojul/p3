@@ -19,37 +19,41 @@
     </header>
     <main class="main">
         <section class="section__header grid-col-span-3">
-            <form class="header__form" action="" role="search"><i class="fa-solid fa-location-dot fa-1x"></i><input
-                    class="header__input" type="search" id="localisation" name="q" placeholder="localisation..."
-                    value="Paris, Belleville">
+            <form class="header__form" role="search">
+                <div class="form__input">
+                    <i class="fa-solid fa-location-dot fa-1x"></i>
+                    <input class="header__input" type="search" id="localisation" name="q" placeholder="localisation..."
+                        value="Paris, Belleville">
+                </div>
+
+                <div class="header__content">
+                    <h1 class="header__title">Réservez le menu qui vous convient</h1>
+                    <p class="header__paragraph">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
+                    <button class="header__button"><span>Explorez nos restaurants</span></button>
+                </div>
             </form>
-            <div class="header__content">
-                <h1 class="header__title">Réservez le menu qui vous convient</h1>
-                <p class="header__paragraph">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
-                <button class="header__button"><a href="#"><span>Explorez nos restaurants</span></a></button>
-            </div>
         </section>
         <section id="fonctionnement">
             <h2>Fonctionnement
             </h2>
             <ol class="function-list">
                 <li class="function-item">
-                    <article class="function">
+                    <div class="function">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <p>Choisissez un restaurant</p>
-                    </article>
+                    </div>
                 </li>
                 <li class="function-item">
-                    <article class="function">
+                    <div class="function">
                         <i class="fa-solid fa-list-ul"></i>
                         <p>Composez votre menu</p>
-                    </article>
+                    </div>
                 </li>
                 <li class="function-item">
-                    <article class="function">
+                    <div class="function">
                         <i class="fa-solid fa-store"></i>
                         <p>Dégustez au restaurant</p>
-                    </article>
+                    </div>
                 </li>
             </ol>
         </section>
@@ -57,21 +61,77 @@
             <h2>Restaurants</h2>
             <ul class="restaurant-list">
                 <li class="restaurant-item">
-                    <article class="">
-                        <div class="img nouveau">
+                    <a href="./la_palette_du_gout.html">
+                        <article class="">
+                            <div class="img nouveau">
+                                <img class="article__img"
+                                    src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                                <span class="new">Nouveau</span>
+                            </div>
+                            <div class="article__content">
+                                <div class="article__text">
+                                    <h3>La palette du&nbsp;goût</h3>
+                                    <span>Ménilmontant</span>
+                                </div>
+                                <div class="heart">
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100">
+                                        <defs>
+                                            <linearGradient id="FillGradient" gradientTransform="rotate(90)">
+                                                <stop offset="0" stop-color="#9356DC">
+                                                    <animate attributeName="offset" values="0;1;0" dur="3s"
+                                                        fill="freeze" repeatCount="indefinite" />
+                                                </stop>
+                                                <stop offset="1" stop-color="#FF79da">
+                                                    <animate attributeName="offset" values="0;1" dur="3s" fill="freeze"
+                                                        repeatCount="1" />
+                                                </stop>
+                                            </linearGradient>
+                                        </defs>
+                                        <g id="heart" fill="url(FillGradient)">
+                                            <path
+                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="restaurant-item">
+                    <a href="#">
+                        <article class="">
+                            <div class="img nouveau">
+                                <img class="article__img"
+                                    src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                                <span class="new">Nouveau</span>
+                            </div>
+                            <div class="article__content">
+                                <div class="article__text">
+                                    <h3>La note enchantée</h3>
+                                    <span>Charonne</span>
+                                </div>
+                                <div class="heart">
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100">
+                                        <use xlink:href="#fillGradient" />
+                                        <use xlink:href="#heart" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+                <li class="restaurant-item">
+                    <a href="#">
+                        <article class="">
                             <img class="article__img"
-                                src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                            <span class="new">Nouveau</span>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__text">
-                                <h3>La palette du&nbsp;goût</h3>
-                                <span>Ménilmontant</span>
-                            </div>
-                            <a href="#Restaurants">
+                                src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            <div class="article__content">
+                                <div class="article__text">
+                                    <h3>À la française</h3>
+                                    <span>Cité Rouge</span>
+                                </div>
                                 <div class="heart">
-                                    <svg class="heart-background" viewBox="0 0 512 512" width="100" height="100"
-                                        title="heart">
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100">
                                         <defs>
                                             <linearGradient id="FillGradient" gradientTransform="rotate(90)">
                                                 <stop offset="0" stop-color="#9356DC">
@@ -80,7 +140,7 @@
                                                 </stop>
                                                 <stop offset="1" stop-color="#FF79da">
                                                     <animate attributeName="offset" values="0;1" dur="3s" fill="freeze"
-                                                        repeatCount="1">
+                                                        repeatCount="1" />
                                                 </stop>
                                             </linearGradient>
                                         </defs>
@@ -90,94 +150,24 @@
                                         </g>
                                     </svg>
                                 </div>
-                            </a>
-                        </div>
-                    </article>
+                            </div>
+                        </article>
+                    </a>
                 </li>
                 <li class="restaurant-item">
-                    <article class="">
-                        <div class="img nouveau">
-                            <img class="article__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                    <a href="#">
+                        <article class="">
+                            <img class="article__img"
+                                src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                 alt="">
-                            <span class="new">Nouveau</span>
-                        </div>
-                        <div class="article__content">
-                            <div class="article__text">
-                                <h3>La note enchantée</h3>
-                                <span>Charonne</span>
-                            </div>
-                            <a href="#">
-                                <div class="heart">
-                                    <svg class="heart-background" viewBox="0 0 512 512" width="100" title="heart">
-                                        <defs>
-                                            <linearGradient id="FillGradient" gradientTransform="rotate(90)">
-                                                <stop offset="0" stop-color="#9356DC">
-                                                    <animate attributeName="offset" values="0;1;0" dur="3s"
-                                                        fill="freeze" repeatCount="indefinite" />
-                                                </stop>
-                                                <stop offset="1" stop-color="#FF79da">
-                                                    <animate attributeName="offset" values="0;1" dur="3s" fill="freeze"
-                                                        repeatCount="1">
-                                                </stop>
-                                            </linearGradient>
-                                        </defs>
-                                        <g id="heart" fill="url(FillGradient)">
-                                            <path
-                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                                        </g>
-                                    </svg>
+                            <div class="article__content">
+                                <div class="article__text">
+                                    <h3>Le délice des&nbsp;sens</h3>
+                                    <span>Folie-Méricourt</span>
                                 </div>
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li class="restaurant-item">
-                    <article class="">
-                        <img class="article__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                            alt="">
-                        <div class="article__content">
-                            <div class="article__text">
-                                <h3>À la française</h3>
-                                <span>Cité Rouge</span>
-                            </div>
-                            <a href="#">
-                                <div class="heart">
-                                    <svg class="heart-background" viewBox="0 0 512 512" width="100" title="heart">
-                                        <defs>
-                                            <linearGradient id="FillGradient" gradientTransform="rotate(90)">
-                                                <stop offset="0" stop-color="#9356DC">
-                                                    <animate attributeName="offset" values="0;1;0" dur="3s"
-                                                        fill="freeze" repeatCount="indefinite" />
-                                                </stop>
-                                                <stop offset="1" stop-color="#FF79da">
-                                                    <animate attributeName="offset" values="0;1" dur="3s" fill="freeze"
-                                                        repeatCount="1">
-                                                </stop>
-                                            </linearGradient>
-                                        </defs>
-                                        <g id="heart" fill="url(FillGradient)">
-                                            <path
-                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </article>
-                </li>
-                <li class="restaurant-item">
-                    <article class="">
-                        <img class="article__img"
-                            src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                        <div class="article__content">
-                            <div class="article__text">
-                                <h3>Le délice des&nbsp;sens</h3>
-                                <span>Folie-Méricourt</span>
-                            </div>
-                            <div class="article__heart">
-                                <a href="#">
+                                <div class="article__heart">
                                     <div class="heart">
-                                        <svg class="heart-background" viewBox="0 0 512 512" width="100" title="heart">
+                                        <svg class="heart-background" viewBox="0 0 512 512" width="100">
                                             <defs>
                                                 <linearGradient id="FillGradient" gradientTransform="rotate(90)">
                                                     <stop offset="0" stop-color="#9356DC">
@@ -186,7 +176,7 @@
                                                     </stop>
                                                     <stop offset="1" stop-color="#FF79da">
                                                         <animate attributeName="offset" values="0;1" dur="3s"
-                                                            fill="freeze" repeatCount="1">
+                                                            fill="freeze" repeatCount="1" />
                                                     </stop>
                                                 </linearGradient>
                                             </defs>
@@ -196,10 +186,10 @@
                                             </g>
                                         </svg>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
                 </li>
             </ul>
         </section>

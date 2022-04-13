@@ -15,9 +15,101 @@
 
 <body>
     <header class="page-header">
+        <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+
         <div class="logo">ohmyfood</div>
     </header>
     <main class="main">
+        <img class="main__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="table de reataurant dressée avec 2 assiettes garnies" width="3936" height="2624">
+        <article class="menu">
+            <div class="menu__header">
+                <h1 class="menu__heading">À la française</h1><span class="menu__heart">
+                    <svg class="heart" viewBox="0 0 512 512" width="100" height="100">
+                        <defs>
+                            <linearGradient id="FillGradient" gradientTransform="rotate(90)">
+                                <stop offset="0" stop-color="#9356DC">
+                                    <animate attributeName="offset" values="0;1;0" dur="3s" fill="freeze"
+                                        repeatCount="indefinite" />
+                                </stop>
+                                <stop offset="1" stop-color="#FF79da">
+                                    <animate attributeName="offset" values="0;1" dur="3s" fill="freeze"
+                                        repeatCount="1" />
+                                </stop>
+                            </linearGradient>
+                        </defs>
+                        <g id="heart" fill="url(FillGradient)">
+                            <path
+                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                        </g>
+                    </svg>
+                </span>
+            </div>
+            <section class="menu__section">
+                <h2 class="section__heading">Entrées</h2>
+                <div class="section__card">
+                    <h3 class="card__title">Tartare de poulpe acidulé</h3>
+                    <p class="card__content">Aux zeste d'orange</p>
+                    <div class="card__price">25€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="section__card">
+                    <h3 class="card__title">Velouté de légumes d'antan</h3>
+                    <p class="card__content">Carotte, panais, topinambour</p>
+                    <div class="card__price">35€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="section__card">
+                    <h3 class="card__title">Soupe à l'oignon</h3>
+                    <p class="card__content">Revisitée</p>
+                    <div class="card__price">20€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+            </section>
+            <section class="menu__section">
+                <h2 class="section__heading">Plats</h2>
+                <div class="section__card">
+                    <h3 class="card__title">Coquilles Saint-Jacques</h3>
+                    <p class="card__content">Accompagnées d'une purée de panais</p>
+                    <div class="card__price">40€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="section__card">
+                    <h3 class="card__title">Magret de canard</h3>
+                    <p class="card__content">Et parmentier de pommes de terre</p>
+                    <div class="card__price">35€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="section__card">
+                    <h3 class="card__title">Pigeonneau d’Ille-et-Vilaine</h3>
+                    <p class="card__content">Sur son lit de gnocchis aux légumes</p>
+                    <div class="card__price">44€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+            </section>
+            <section class="menu__section">
+                <h2 class="section__heading">Desserts</h2>
+                <div class="section__card">
+                    <h3 class="card__title">Pétales de violettes glacés</h3>
+                    <p class="card__content">Et purée de noisettes</p>
+                    <div class="card__price">18€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="section__card">
+                    <h3 class="card__title">Fondant au chocolat</h3>
+                    <p class="card__content">Revisité</p>
+                    <div class="card__price">22€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+                <div class="section__card">
+                    <h3 class="card__title">Millefeuille croustillant</h3>
+                    <p class="card__content">Myrtilles et pâte d’amande</p>
+                    <div class="card__price">23€</div>
+                    <div class="card__icon"><i class="fa-regular fa-circle-check"></i></div>
+                </div>
+            </section>
+            <button class="menu__submit">Commander</button>
+        </article>
 
     </main>
     <footer class="page-footer">
@@ -26,7 +118,7 @@
             <li><a href="#"><i class="fa-solid fa-utensils"></i><span>Proposer un restaurant</span></a></li>
             <li><a href="#"><i class="fa-solid fa-handshake-angle fa-xs"></i><span>Devenir partenaire</span></a></li>
             <li><a href="#"><span>Mentions légales</span></a></li>
-            <li><a href="#"><span>Contact</span></a></li>
+            <li><a href="mailto:contact@ohmyfood.fr"><span>Contact</span></a></li>
         </ul>
     </footer>
 </body>
