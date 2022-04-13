@@ -268,7 +268,7 @@ a {
         &:active,
         &:hover {
           opacity: 1;
-          #heart {
+          path {
             stroke: none;
             fill: url(#FillGradient);
             animation: 1s up-enter;

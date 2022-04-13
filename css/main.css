@@ -260,7 +260,7 @@ a {
 #restaurants article .article__content .heart:active, #restaurants article .article__content .heart:hover {
   opacity: 1;
 }
-#restaurants article .article__content .heart:active #heart, #restaurants article .article__content .heart:hover #heart {
+#restaurants article .article__content .heart:active path, #restaurants article .article__content .heart:hover path {
   stroke: none;
   fill: url(#FillGradient);
   animation: 1s up-enter;
