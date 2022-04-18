@@ -33,10 +33,8 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -74,84 +72,84 @@ a:active {
 }
 
 /* HEADER */
-.page-header {
+.page__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.page-header .fa-arrow-left {
-  margin-left: 2rem;
-  font-size: 2rem;
+.page__header .fa-arrow-left {
+  margin: clamp(0.5rem, 0.3rem + 1.5vw, 2rem);
+  font-size: clamp(1rem, 0.5rem + 2vw, 2.2rem);
 }
-.page-header .logo {
+.page__header .header__logo {
   margin: 0 auto;
   text-align: center;
   line-height: 1.6;
   font-family: "Shrikhand";
-  font-size: clamp(2rem, 1rem + 5vw, 6rem);
+  font-size: clamp(1.5rem, 1rem + 4vw, 5rem);
 }
 
 /* BODY */
-.main {
+.page__hero {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr 3rem max-content;
 }
-.main .main__img {
+.page__hero .hero__img {
   height: auto;
   aspect-ratio: 16/9;
-  grid-column: 1/-1;
+  grid-column: 1/2;
   grid-row: 1/3;
 }
-.main .menu {
+.page__hero .hero__menu {
   padding: 1rem;
   border-radius: 3rem;
   grid-column: 1/-1;
   grid-row: 2/-1;
   background: #f2f2f2;
 }
-.main .menu .menu__header {
+.page__hero .hero__menu .menu__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main .menu .menu__header .menu__heading {
+.page__hero .hero__menu .menu__header .menu__heading {
   display: inline-block;
   font-family: "Shrikhand";
   font-weight: 300;
 }
-.main .menu .menu__header .menu__heart {
+.page__hero .hero__menu .menu__header .menu__heart {
   stroke: black;
   opacity: 0.5;
   stroke-width: 30;
   cursor: pointer;
   padding: 8px;
 }
-.main .menu .menu__header .menu__heart .heart {
+.page__hero .hero__menu .menu__header .menu__heart .heart {
+  fill: none;
   height: 50px;
   overflow: visible;
   width: clamp(1rem, 0.8rem + 3vw, 2.5rem);
 }
-.main .menu .menu__header .menu__heart:active, .main .menu .menu__header .menu__heart:hover {
+.page__hero .hero__menu .menu__header .menu__heart:active, .page__hero .hero__menu .menu__header .menu__heart:hover {
   opacity: 1;
 }
-.main .menu .menu__header .menu__heart:active #heart, .main .menu .menu__header .menu__heart:hover #heart {
+.page__hero .hero__menu .menu__header .menu__heart:active #heart, .page__hero .hero__menu .menu__header .menu__heart:hover #heart {
   stroke: none;
-  fill: url(#FillGradient);
-  animation: 1s up-enter;
+  fill: url(#fillGradient);
+  animation: 2s bottom-enter;
 }
-@keyframes up-enter {
-  0% {
+@keyframes bottom-enter {
+  from {
     clip-path: inset(100% 0 0 0);
   }
-  100% {
+  to {
     clip-path: inset(0);
   }
 }
-.main .menu .menu__section {
+.page__hero .hero__menu .menu__section {
   margin-bottom: 3rem;
 }
-.main .menu .menu__section .section__heading {
+.page__hero .hero__menu .menu__section .section__heading {
   opacity: 0.6;
   font-size: 1.2rem;
   font-weight: 100;
@@ -161,7 +159,7 @@ a:active {
   padding: 0.3rem 0;
   margin: 0.8rem 0;
 }
-.main .menu .menu__section .section__card {
+.page__hero .hero__menu .menu__section .section__card {
   display: grid;
   grid-template-columns: 1fr max-content;
   grid-gap: 0.5rem;
@@ -181,7 +179,7 @@ a:active {
     opacity: 1;
   }
 }
-.main .menu .menu__section .section__card .card__title {
+.page__hero .hero__menu .menu__section .section__card .card__title {
   grid-column: 1;
   grid-row: 1;
   overflow: hidden;
@@ -189,7 +187,7 @@ a:active {
   white-space: nowrap;
   padding: 1rem 1rem 0;
 }
-.main .menu .menu__section .section__card .card__content {
+.page__hero .hero__menu .menu__section .section__card .card__content {
   grid-column: 1;
   grid-row: 2;
   overflow: hidden;
@@ -199,19 +197,19 @@ a:active {
   opacity: 0.6;
   padding: 0 1rem 1rem;
 }
-.main .menu .menu__section .section__card .card__price {
+.page__hero .hero__menu .menu__section .section__card .card__price {
   grid-column: 2;
   grid-row: 2;
   font-weight: bold;
   padding: 0 1rem 1rem;
 }
-.main .menu .menu__section .section__card .card__icon {
+.page__hero .hero__menu .menu__section .section__card .card__icon {
   grid-column: 3;
   display: none;
   border-radius: 0 1rem 1rem 0;
   animation: display-block 0.5s ease-in-out forwards;
 }
-.main .menu .menu__section .section__card:hover .card__icon {
+.page__hero .hero__menu .menu__section .section__card:hover .card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,7 +228,7 @@ a:active {
     transform: translateX(0);
   }
 }
-.main .menu .menu__section .section__card:hover .fa-regular {
+.page__hero .hero__menu .menu__section .section__card:hover .fa-regular {
   animation: icon_rotation 0.5s ease-in-out forwards;
 }
 @keyframes icon_rotation {
@@ -241,7 +239,7 @@ a:active {
     transform: rotate(360deg);
   }
 }
-.main .menu .menu__submit {
+.page__hero .hero__menu .menu__submit {
   display: block;
   margin: 0 auto 3rem;
   padding: 1rem 2rem;
@@ -251,44 +249,63 @@ a:active {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   color: #fff;
 }
-.main .menu .menu__submit:active, .main .menu .menu__submit:hover {
+.page__hero .hero__menu .menu__submit:active, .page__hero .hero__menu .menu__submit:hover {
   cursor: pointer;
   opacity: 0.85;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
 }
 
 /* FOOTER */
-.page-footer {
+.page__footer {
   padding: 3vmin;
   color: #fff;
   background-color: #353535;
 }
-.page-footer .page-footer__title {
+.page__footer .footer__logo {
   font-family: "Shrikhand", serif;
   font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
+  padding: 1rem 0;
 }
-.page-footer ul {
+.page__footer .footer__list {
   list-style-type: none;
   padding: 0;
 }
-.page-footer ul li {
+.page__footer .footer__list .footer__item {
   padding: clamp(0.3rem, 0.2rem + 1vw, 0.8rem) 0;
 }
-.page-footer ul li a {
+.page__footer .footer__list .footer__item a {
   text-decoration: none;
   color: #fff;
 }
-.page-footer ul li a i {
+.page__footer .footer__list .footer__item a i {
   margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
 }
-.page-footer ul li a .fa-xs {
+.page__footer .footer__list .footer__item a .fa-xs {
   font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1.3rem);
 }
-.page-footer ul li a .fa-utensils {
+.page__footer .footer__list .footer__item a .fa-utensils {
   font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem);
 }
-.page-footer ul li a span {
+.page__footer .footer__list .footer__item a span {
   font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
+}
+
+@media screen and (min-width: 768px) {
+  .page__footer .footer__logo {
+    text-align: center;
+  }
+  .page__footer .footer__list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    row-gap: 1rem;
+    justify-content: space-around;
+  }
+  .page__footer .footer__list .footer__item {
+    justify-self: center;
+  }
+  .page__footer .footer__list .footer__item:nth-child(2) {
+    grid-row: 2/3;
+  }
 }
 
 /*# sourceMappingURL=menu_1.css.map */

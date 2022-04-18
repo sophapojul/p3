@@ -37,6 +37,9 @@
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
+$bg-menu: #f2f2f2;
+$bg-card: #fff;
+$bg-footer: #353535;
 *,
 *::after,
 *::before {
@@ -47,10 +50,8 @@ $tertiary: #99e2d0;
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -82,39 +83,38 @@ a:active {
 }
 
 /* HEADER */
-.page-header {
+.page__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   .fa-arrow-left {
-    margin-left: 2rem;
-    font-size: 2rem;
+    margin: clamp(0.5rem, 0.3rem + 1.5vw, 2rem);
+    font-size: clamp(1rem, 0.5rem + 2vw, 2.2rem);
   }
-  .logo {
+  .header__logo {
     margin: 0 auto;
     text-align: center;
     line-height: 1.6;
     font-family: "Shrikhand";
-    font-size: clamp(2rem, 1rem + 5vw, 6rem);
+    font-size: clamp(1.5rem, 1rem + 4vw, 5rem);
   }
 }
 /* BODY */
-.main {
+.page__hero {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: 1fr 3rem max-content;
-  .main__img {
+  .hero__img {
     height: auto;
     aspect-ratio: 16 / 9;
-    grid-column: 1 / -1;
+    grid-column: 1 / 2;
     grid-row: 1 / 3;
   }
-  .menu {
+  .hero__menu {
     padding: 1rem;
     border-radius: 3rem;
     grid-column: 1 / -1;
     grid-row: 2 / -1;
-    background: #f2f2f2;
+    background: $bg-menu;
     .menu__header {
       display: flex;
       justify-content: space-between;
@@ -131,6 +131,7 @@ a:active {
         cursor: pointer;
         padding: 8px;
         .heart {
+          fill: none;
           height: 50px;
           overflow: visible;
           width: clamp(1rem, 0.8rem + 3vw, 2.5rem);
@@ -140,13 +141,13 @@ a:active {
           opacity: 1;
           #heart {
             stroke: none;
-            fill: url(#FillGradient);
-            animation: 1s up-enter;
-            @keyframes up-enter {
-              0% {
+            fill: url(#fillGradient);
+            animation: 2s bottom-enter;
+            @keyframes bottom-enter {
+              from {
                 clip-path: inset(100% 0 0 0);
               }
-              100% {
+              to {
                 clip-path: inset(0);
               }
             }
@@ -171,8 +172,7 @@ a:active {
         grid-template-columns: 1fr max-content;
         grid-gap: 0.5rem;
         align-items: center;
-        // position: relative;
-        background: #fff;
+        background: $bg-card;
         border-radius: 1.4rem;
         margin-bottom: 1rem;
         animation: translateToTop 2s ease-out forwards;
@@ -216,31 +216,6 @@ a:active {
           border-radius: 0 1rem 1rem 0;
           animation: display-block 0.5s ease-in-out forwards;
         }
-        // &::after {
-        //   display: block;
-        //   text-rendering: auto;
-        //   -webkit-font-smoothing: antialiased;
-        //   font-family: "Font Awesome 6 Free";
-        //   font-size: 2rem;
-        //   content: "\f058";
-        //   position: absolute;
-        //   color: white;
-        //   background: $tertiary;
-        //   grid-column: 3;
-        //   grid-row: 1 / 3;
-        //   opacity: 0;
-        //   top: 13px;
-        //   right: -20px;
-        //   transition: all 0.5s;
-        // }
-        // &:hover {
-        //   padding-right: 50px;
-        //   &::after {
-        //     opacity: 1;
-        //     right: 10px;
-        //     transform: rotate(360deg);
-        //   }
-        // }
         &:hover {
           .card__icon {
             display: flex;
@@ -295,18 +270,19 @@ a:active {
 }
 
 /* FOOTER */
-.page-footer {
+.page__footer {
   padding: 3vmin;
   color: #fff;
-  background-color: #353535;
-  .page-footer__title {
+  background-color: $bg-footer;
+  .footer__logo {
     font-family: "Shrikhand", serif;
     font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
+    padding: 1rem 0;
   }
-  ul {
+  .footer__list {
     list-style-type: none;
     padding: 0;
-    li {
+    .footer__item {
       padding: clamp(0.3rem, 0.2rem + 1vw, 0.8rem) 0;
       a {
         text-decoration: none;
@@ -322,6 +298,25 @@ a:active {
         }
         span {
           font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__footer {
+    .footer__logo {
+      text-align: center;
+    }
+    .footer__list {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      row-gap: 1rem;
+      justify-content: space-around;
+      .footer__item {
+        justify-self: center;
+        &:nth-child(2) {
+          grid-row: 2 / 3;
         }
       }
     }
