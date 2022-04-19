@@ -1,11 +1,11 @@
-@use "./abstracts";
+@use "./abstracts/" as a;
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
 body {
-  font-family: abstracts.$ff-primary;
+  font-family: a.$ff-primary;
   font-size: 16px;
   background: #fff;
 }
@@ -42,7 +42,7 @@ a:active {
     margin: 0 auto;
     padding: 1rem 0;
     text-align: center;
-    font-family: abstracts.$ff-cursive;
+    font-family: a.$ff-cursive;
     font-size: clamp(1.5rem, 1rem + 5vw, 4rem);
     position: relative;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -86,7 +86,7 @@ a:active {
       border: none;
       padding: clamp(0.8rem, 0.7rem + 1vw, 1.5rem)
         clamp(0.7rem, 0.6rem + 1vw, 1.7rem);
-      background: linear-gradient(abstracts.$secondary, abstracts.$primary);
+      background: linear-gradient(a.$secondary, a.$primary);
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
       &:active,
       &:hover {
@@ -129,7 +129,7 @@ a:active {
         font-weight: bold;
         border-radius: 2em;
         color: #fff;
-        background: abstracts.$primary;
+        background: a.$primary;
       }
       .function {
         align-self: start;
@@ -150,7 +150,7 @@ a:active {
           background: rgba(231, 182, 225, 0.1);
           box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
           i {
-            color: abstracts.$primary;
+            color: a.$primary;
           }
         }
         p {
@@ -182,7 +182,7 @@ a:active {
       .new {
         color: #008766;
         font-weight: bold;
-        background: abstracts.$tertiary;
+        background: a.$tertiary;
         border-radius: 0.3rem;
         align-self: start;
         justify-self: end;
@@ -261,7 +261,7 @@ a:active {
   color: #fff;
   background-color: #353535;
   .footer__logo {
-    font-family: abstracts.$ff-cursive;
+    font-family: a.$ff-cursive;
     font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
   }
   .footer__list {
