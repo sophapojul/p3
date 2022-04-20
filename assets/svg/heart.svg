@@ -1,0 +1,17 @@
+<svg viewBox="0 0 171.24 156.595" xmlns="http://www.w3.org/2000/svg"
+                                        visibility="hidden" width="0" height="0">
+    <symbol id="heart" viewBox="0 0 171.24 156.595">
+        <linearGradient id="FillGradient" gradientTransform="rotate(90)">
+            <stop offset="0" stop-color="#9356DC">
+                <animate attributeName="offset" values="0;1;0" dur="3s"
+                    fill="freeze" repeatCount="indefinite" />
+            </stop>
+            <stop offset="1" stop-color="#FF79da">
+                <animate attributeName="offset" values="0;1" dur="3s" fill="freeze"
+                    repeatCount="1" />
+            </stop>
+        </linearGradient>
+    </symbol>
+        <path class="heart-path"
+            d="M48.91.283a50 50 0 0 0-34 14.626c-19.527 19.527-19.527 51.185 0 70.71l35.355 35.356 35.355 35.356 35.355-35.356 35.356-35.355a50 50 0 0 0 0-70.71 50 50 0 0 0-70.71 0A50 50 0 0 0 48.91.282z" />
+</svg>

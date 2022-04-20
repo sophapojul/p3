@@ -1,0 +1,40 @@
+@use "../utils";
+@use "../base";
+
+.page__footer {
+  padding: 5vmin;
+  background-color: #353535;
+  .footer__logo {
+    padding: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem) 0;
+    @include utils.respond-to("small") {
+      text-align: center;
+    }
+  }
+  .footer__list {
+    list-style-type: none;
+    padding: 0;
+    @include utils.respond-to("small") {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      row-gap: 1rem;
+      justify-content: space-around;
+    }
+    .footer__item {
+      padding: clamp(0.3rem, 0.2rem + 1vw, 0.8rem) 0;
+      @include utils.respond-to("small") {
+        justify-self: center;
+        a {
+          text-decoration: none;
+          i {
+            margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
+          }
+        }
+      }
+      &:nth-child(2) {
+        @include utils.respond-to("small") {
+          grid-row: 2 / 3;
+        }
+      }
+    }
+  }
+}
