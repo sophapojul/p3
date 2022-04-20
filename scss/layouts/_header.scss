@@ -1,0 +1,11 @@
+@use "../utils";
+@use "../base";
+
+.page__header {
+  .header__logo {
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+  }
+}

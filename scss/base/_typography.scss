@@ -1,0 +1,102 @@
+@use "../utils";
+h1 {
+  font-size: clamp(1rem, 1rem + 2vw, 2rem);
+}
+h2 {
+  font-size: clamp(1rem, 0.9rem + 2vw, 1.8rem);
+}
+h3,
+p {
+  font-size: clamp(0.9rem, 0.8rem + 1vw, 1.5rem);
+}
+.page__header {
+  .header__logo {
+    font-family: utils.$ff-cursive;
+    font-size: clamp(1.5rem, 1rem + 5vw, 4rem);
+  }
+}
+.page__hero {
+  .section__header {
+    .header__form {
+      .form__input {
+        .header__input {
+          font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+        }
+      }
+      .fa-location-dot {
+        font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+      }
+    }
+    .header__content {
+      .header__button {
+        color: utils.$lightgrey;
+        font-weight: bold;
+        font-size: clamp(1rem, 0.8rem + 1vw, 1.3rem);
+      }
+    }
+  }
+  .section__operation {
+    .function__list {
+      .function__item {
+        &::before {
+          line-height: clamp(1rem, 1rem + 1vw, 2rem);
+          font-weight: bold;
+          color: utils.$bg-card;
+        }
+        .function {
+          color: lighten(black, 33%);
+          &:hover,
+          &:focus,
+          &:active {
+            i {
+              color: utils.$primary;
+            }
+          }
+          p {
+            font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.3rem);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .section__restaurants {
+    .restaurant {
+      .nouveau {
+        .new {
+          color: darken(utils.$tertiary, 40%);
+          font-weight: bold;
+          font-size: clamp(0.4rem, 0.4rem + 1.5vw, 1.1rem);
+        }
+      }
+      .article__content {
+        span {
+          font-size: clamp(0.9rem, 0.7rem + 1vw, 1.4rem);
+        }
+      }
+    }
+  }
+}
+.page__footer {
+  color: utils.$bg-card;
+  .footer__logo {
+    font-family: utils.$ff-cursive;
+    font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
+  }
+  .footer__list {
+    .footer__item {
+      a {
+        color: inherit;
+      }
+      .fa-xs {
+        font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1.3rem);
+      }
+      .fa-utensils {
+        font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem);
+      }
+      span {
+        font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
+      }
+    }
+  }
+}
