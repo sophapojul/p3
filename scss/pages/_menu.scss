@@ -98,6 +98,7 @@
         grid-template-columns: 1fr max-content;
         grid-gap: 0.5rem;
         align-items: center;
+        overflow: hidden;
         background: utils.$bg-card;
         border-radius: 1.4rem;
         margin-bottom: 1rem;
@@ -140,7 +141,7 @@
           grid-column: 3;
           display: none;
           border-radius: 0 1rem 1rem 0;
-          animation: display-block 0.5s ease-in-out forwards;
+          animation: display-block 1s ease-in-out forwards;
         }
         &:hover {
           .card__icon {
@@ -163,7 +164,7 @@
             }
           }
           .fa-regular {
-            animation: icon_rotation 0.5s ease-in-out forwards;
+            animation: icon_rotation 1s 0.2s ease-in-out forwards;
             @keyframes icon_rotation {
               to {
                 transform: rotate(360deg);
