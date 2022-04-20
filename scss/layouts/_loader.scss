@@ -1,0 +1,39 @@
+@use "../utils";
+@use "../base";
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 0.3;
+  .spin {
+    height: 1rem;
+    width: 1rem;
+    background: utils.$primary;
+    border-radius: 50%;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      height: inherit;
+      width: inherit;
+      border-radius: inherit;
+      background: inherit;
+      position: absolute;
+      transform: rotate(0) translate(2rem);
+      animation: loader 2s ease forwards;
+    }
+    &::before {
+      animation-delay: 500ms;
+    }
+  }
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg) translate(2rem);
+  }
+}

@@ -3,12 +3,9 @@ $breakpoints: (
   "small": 768px,
   "medium": 992px,
   "large": 1200px,
-  "very-large": 1440px,
+  "xlarge": 1440px,
 ) !default;
 /// Mixin to manage responsive breakpoints
-/// @author Kitty Giraudel
-/// @param {String} $breakpoint - Breakpoint name
-/// @require $breakpoints
 @mixin respond-to($breakpoint) {
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
@@ -24,8 +21,30 @@ $breakpoints: (
           + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin circle($width, $height, $color) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background: $color;
+}
 @mixin rotate($deg) {
   transform: rotate($deg);
+}
+@mixin fade($fade, $timing, $delay, $count, $fill) {
+  animation: $fade $timing $delay;
+  animation-iteration-count: $count;
+  animation-fill-mode: $fill;
 }
 // @mixin pseudo($loc: before, $content: "", $pos: absolute) {
 //   position: relative;
@@ -49,24 +68,31 @@ $breakpoints: (
   height: $height;
   @content;
 }
-@mixin transition($prop, $time, $easing: ease-in, $delay: 0s) {
-  $transition: ();
-  @for $i from 1 through length($prop) {
-    @for $j from 0 to (length($prop)) - (length($time)) {
-      $time: join($time, nth($time, -1));
-    }
-    @for $j from 0 to (length($prop)) - (length($easing)) {
-      $easing: join($easing, nth($easing, -1));
-    }
-    @for $j from 0 to (length($prop)) - (length($delay)) {
-      $delay: join($delay, nth($delay, -1));
-    }
+// @mixin transition($prop, $time, $easing: ease-in, $delay: 0s) {
+//   $transition: ();
+//   @for $i from 1 through length($prop) {
+//     @for $j from 0 to (length($prop)) - (length($time)) {
+//       $time: join($time, nth($time, -1));
+//     }
+//     @for $j from 0 to (length($prop)) - (length($easing)) {
+//       $easing: join($easing, nth($easing, -1));
+//     }
+//     @for $j from 0 to (length($prop)) - (length($delay)) {
+//       $delay: join($delay, nth($delay, -1));
+//     }
 
-    $transition: append(
-      $transition,
-      (nth($prop, $i) nth($time, $i) nth($easing, $i) nth($delay, $i)),
-      $separator: comma
-    );
-  }
-  transition: $transition;
+//     $transition: append(
+//       $transition,
+//       (nth($prop, $i) nth($time, $i) nth($easing, $i) nth($delay, $i)),
+//       $separator: comma
+//     );
+//   }
+//   transition: $transition;
+// }
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
 }
