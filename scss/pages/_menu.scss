@@ -18,7 +18,7 @@
   display: grid;
   grid-template-rows: 1fr 3rem max-content;
   grid-template-columns: repeat(12, 1fr);
-  background: utils.$bg-footer;
+  background: utils.$darkGrey;
   @include utils.respond-to("medium") {
   }
   .hero__img {
@@ -33,7 +33,7 @@
     border-radius: 3rem 3rem 0 0;
     grid-column: 1 / -1;
     grid-row: 2 / -1;
-    background: utils.$bg-menu;
+    background: utils.$lightGrey;
     @include utils.respond-to("medium") {
       grid-column: 2 / 12;
       border-radius: 3rem;
@@ -51,7 +51,7 @@
         font-weight: 300;
       }
       .menu__heart {
-        stroke: utils.$bg-footer;
+        stroke: utils.$darkGrey;
         opacity: 0.5;
         stroke-width: 30;
         cursor: pointer;
@@ -99,7 +99,7 @@
         grid-gap: 0.5rem;
         align-items: center;
         overflow: hidden;
-        background: utils.$bg-card;
+        background: utils.$white;
         border-radius: 1.4rem;
         margin-bottom: 1rem;
         animation: translateToTop 2s ease-out forwards;
@@ -196,7 +196,7 @@
 /* FOOTER */
 .page__footer {
   padding: 3vmin;
-  background-color: utils.$bg-footer;
+  background-color: utils.$darkGrey;
   .footer__logo {
     padding: 1rem 0;
   }

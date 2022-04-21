@@ -3,7 +3,7 @@
 
 .page__footer {
   padding: 5vmin;
-  background-color: #353535;
+  background-color: utils.$darkGrey;
   .footer__logo {
     padding: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem) 0;
     @include utils.respond-to("small") {
