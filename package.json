@@ -4,7 +4,7 @@
   "description": "![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000) [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/sophapojul/p3#readme) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/sophapojul/p3/graphs/commit-activity) [![License: MIT](https://img.shields.io/github/license/sophapojul/Ohmyfood)](https://github.com/sophapojul/p3/blob/master/LICENSE)",
   "main": "index.js",
   "scripts": {
-    "watch": "sass -w scss:css"
+    "start": "sass -w scss:css"
   },
   "repository": {
     "type": "git",
