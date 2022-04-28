@@ -318,7 +318,7 @@ p {
 @media (min-width: 1200px) {
   .hero__menu .menu__header {
     gap: 2rem;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 .hero__menu .menu__header h1.menu__heading {
@@ -331,8 +331,8 @@ p {
     width: min-content;
     font-size: 3rem;
     color: white;
-    gap: 2rem;
-    justify-content: center;
+    line-height: 1.6;
+    word-spacing: 16px;
   }
 }
 .hero__menu .menu__header h1.menu__heading span {
