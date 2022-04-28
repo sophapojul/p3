@@ -116,6 +116,9 @@
         width: 3rem;
         padding: 0.3rem 0;
         margin: 0.8rem 0;
+        @include utils.respond-to("large") {
+          color: utils.$whiteSmoke;
+        }
       }
       .section__card {
         display: grid;
