@@ -202,17 +202,22 @@
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
       color: #fff;
       position: relative;
-      @include utils.respond-to("large") {
-        grid-column: 1 / -1;
-        font-size: 2rem;
-        font-weight: bold;
-        box-shadow: 5px 5px 10px rgba(125, 125, 125, 0.4);
-      }
       &:active,
       &:hover {
         cursor: pointer;
         opacity: 0.85;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
+      }
+      @include utils.respond-to("large") {
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        font-weight: bold;
+        box-shadow: inset 0px 0px 15px 6px rgb(0 0 0 / 90%);
+        &:active,
+        &:hover {
+          opacity: 1;
+          box-shadow: 0 0 15px 5px rgba(255 255 255 / 100%);
+        }
       }
     }
   }

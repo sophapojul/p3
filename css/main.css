@@ -157,21 +157,8 @@ p {
 .page__footer .footer__list .footer__item {
   padding: clamp(0.3rem, 0.2rem + 1vw, 0.8rem) 0;
 }
-@media (min-width: 768px) {
-  .page__footer .footer__list .footer__item {
-    justify-self: center;
-  }
-  .page__footer .footer__list .footer__item a {
-    text-decoration: none;
-  }
-  .page__footer .footer__list .footer__item a i {
-    margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
-  }
-}
-@media (min-width: 768px) {
-  .page__footer .footer__list .footer__item:nth-child(2) {
-    grid-row: 2/3;
-  }
+.page__footer .footer__list .footer__item i {
+  margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
 }
 
 .page__header .header__logo {
