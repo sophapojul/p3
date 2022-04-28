@@ -1,4 +1,4 @@
-@use "../utils";
+@use '../utils';
 h1 {
   font-size: clamp(1rem, 1rem + 2vw, 2rem);
 }
@@ -15,8 +15,8 @@ p {
     font-size: clamp(1.5rem, 1rem + 5vw, 4rem);
   }
 }
-.page__hero {
-  .section__header {
+.hero {
+  &__header {
     .header__form {
       .form__input {
         .header__input {
@@ -35,7 +35,7 @@ p {
       }
     }
   }
-  .section__operation {
+  &__operation {
     .function__list {
       .function__item {
         &::before {
@@ -60,7 +60,7 @@ p {
       }
     }
   }
-  .section__restaurants {
+  &__restaurants {
     .restaurant {
       .nouveau {
         .new {
@@ -69,7 +69,7 @@ p {
           font-size: clamp(0.4rem, 0.4rem + 1.5vw, 1.1rem);
         }
       }
-      .article__content {
+      &__content {
         span {
           font-size: clamp(0.9rem, 0.7rem + 1vw, 1.4rem);
         }
@@ -77,13 +77,13 @@ p {
     }
   }
 }
-.page__footer {
+.footer {
   color: utils.$white;
-  .footer__logo {
+  &__logo {
     font-family: utils.$ff-cursive;
     font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
   }
-  .footer__list {
+  &__list {
     .footer__item {
       a {
         color: inherit;

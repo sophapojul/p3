@@ -1,44 +1,44 @@
-@use "../utils";
-@use "../base";
-@use "../layouts";
-@use "../components";
+@use '../utils';
+@use '../base';
+@use '../layouts';
+@use '../components';
 
 /* HEADER */
 .page__header {
-  @include utils.flex($justify:space-between);
+  @include utils.flex($justify: space-between);
   .fa-arrow-left {
     margin: clamp(0.5rem, 0.3rem + 1.5vw, 2rem);
     font-size: clamp(1rem, 0.5rem + 2vw, 2.2rem);
   }
 }
 /* BODY */
-.page__hero {
+.hero {
   display: grid;
   grid-template-rows: 1fr 3rem max-content;
   grid-template-columns: repeat(12, 1fr);
   background: utils.$darkGrey;
-  .hero__img {
+  &__img {
     margin: 0 auto;
     height: auto;
     aspect-ratio: 16 / 9;
     grid-column: 1 / -1;
     grid-row: 1 / 3;
-    @include utils.respond-to("large") {
+    @include utils.respond-to('large') {
       object-position: right center;
       height: 100%;
     }
   }
-  .hero__menu {
+  &__menu {
     padding: 1rem;
     border-radius: 3rem 3rem 0 0;
     grid-column: 1 / -1;
     grid-row: 2 / -1;
     background: utils.$lightGrey;
-    @include utils.respond-to("medium") {
+    @include utils.respond-to('medium') {
       grid-column: 2 / 12;
       border-radius: 3rem;
     }
-    @include utils.respond-to("large") {
+    @include utils.respond-to('large') {
       grid-column: 4 / -1;
       grid-row: 1 / -1;
       display: grid;
@@ -50,16 +50,16 @@
       margin: 1rem;
     }
     .menu__header {
-      @include utils.flex($justify:space-between);
-      @include utils.respond-to("large") {
+      @include utils.flex($justify: space-between);
+      @include utils.respond-to('large') {
         gap: 2rem;
         justify-content: center;
       }
-      .menu__heading {
+      h1.menu__heading {
         display: inline-block;
-        font-family: "Shrikhand";
+        font-family: 'Shrikhand';
         font-weight: 300;
-        @include utils.respond-to("large") {
+        @include utils.respond-to('large') {
           font-size: 3rem;
           color: white;
           gap: 2rem;
@@ -72,7 +72,7 @@
         stroke-width: 30;
         cursor: pointer;
         padding: 8px;
-        @include utils.respond-to("large") {
+        @include utils.respond-to('large') {
           stroke: white;
         }
         .heart {
@@ -100,9 +100,9 @@
         }
       }
     }
-    .menu__section {
+    .menu {
       margin-bottom: 3rem;
-      .section__heading {
+      h2 &__heading {
         opacity: 0.6;
         font-size: 1.2rem;
         font-weight: 100;
@@ -111,11 +111,11 @@
         width: 3rem;
         padding: 0.3rem 0;
         margin: 0.8rem 0;
-        @include utils.respond-to("large") {
+        @include utils.respond-to('large') {
           color: utils.$whiteSmoke;
         }
       }
-      .section__card {
+      .card {
         display: grid;
         grid-template-columns: 1fr max-content;
         grid-gap: 0.5rem;
@@ -135,13 +135,13 @@
             opacity: 1;
           }
         }
-        .card__title {
+        &__title {
           grid-column: 1;
           grid-row: 1;
           @include utils.ellipsis;
           padding: 1rem 1rem 0;
         }
-        .card__content {
+        &__content {
           grid-column: 1;
           grid-row: 2;
           @include utils.ellipsis;
@@ -149,13 +149,13 @@
           opacity: 0.6;
           padding: 0 1rem 1rem;
         }
-        .card__price {
+        &__price {
           grid-column: 2;
           grid-row: 2;
           font-weight: bold;
           padding: 0 1rem 1rem;
         }
-        .card__icon {
+        &__icon {
           grid-column: 3;
           grid-row: 1 / 3;
           display: grid;
@@ -192,7 +192,10 @@
       padding: 1rem 2rem;
       border: none;
       border-radius: 2rem;
-      background-image: linear-gradient(utils.$secondary, utils.$primary);
+      background-image: linear-gradient(
+        utils.$secondary,
+        utils.$primary
+      );
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
       color: #fff;
       position: relative;
@@ -202,7 +205,7 @@
         opacity: 0.85;
         box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
       }
-      @include utils.respond-to("large") {
+      @include utils.respond-to('large') {
         grid-column: 1 / -1;
         font-size: 2rem;
         font-weight: bold;
@@ -218,13 +221,13 @@
 }
 
 /* FOOTER */
-.page__footer {
+.footer {
   padding: 3vmin;
   background-color: utils.$darkGrey;
-  .footer__logo {
+  &__logo {
     padding: 1rem 0;
   }
-  .footer__list {
+  &__list {
     list-style-type: none;
     padding: 0;
     .footer__item {
@@ -239,11 +242,11 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .page__footer {
-    .footer__logo {
+  .footer {
+    &__logo {
       text-align: center;
     }
-    .footer__list {
+    &__list {
       display: grid;
       grid-template-columns: repeat(2, max-content);
       row-gap: 1rem;

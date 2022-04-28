@@ -1,16 +1,16 @@
 @use '../utils';
 @use '../base';
 
-.page__footer {
+.footer {
   padding: 5vmin;
   background-color: utils.$darkGrey;
-  .footer__logo {
+  &__logo {
     padding: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem) 0;
     @include utils.respond-to('small') {
       text-align: center;
     }
   }
-  .footer__list {
+  &__list {
     list-style-type: none;
     padding: 0;
     @include utils.respond-to('small') {

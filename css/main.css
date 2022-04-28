@@ -75,89 +75,89 @@ p {
   font-size: clamp(1.5rem, 1rem + 5vw, 4rem);
 }
 
-.page__hero .section__header .header__form .form__input .header__input {
+.hero__header .header__form .form__input .header__input {
   font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
 }
-.page__hero .section__header .header__form .fa-location-dot {
+.hero__header .header__form .fa-location-dot {
   font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);
 }
-.page__hero .section__header .header__content .header__button {
+.hero__header .header__content .header__button {
   color: #f6f6f6;
   font-weight: bold;
   font-size: clamp(1rem, 0.8rem + 1vw, 1.3rem);
 }
-.page__hero .section__operation .function__list .function__item::before {
+.hero__operation .function__list .function__item::before {
   line-height: clamp(1rem, 1rem + 1vw, 2rem);
   font-weight: bold;
   color: #fff;
 }
-.page__hero .section__operation .function__list .function__item .function {
+.hero__operation .function__list .function__item .function {
   color: #545454;
 }
-.page__hero .section__operation .function__list .function__item .function:hover i, .page__hero .section__operation .function__list .function__item .function:focus i, .page__hero .section__operation .function__list .function__item .function:active i {
+.hero__operation .function__list .function__item .function:hover i, .hero__operation .function__list .function__item .function:focus i, .hero__operation .function__list .function__item .function:active i {
   color: #9356dc;
 }
-.page__hero .section__operation .function__list .function__item .function p {
+.hero__operation .function__list .function__item .function p {
   font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.3rem);
   font-weight: bold;
 }
-.page__hero .section__restaurants .restaurant .nouveau .new {
+.hero__restaurants .restaurant .nouveau .new {
   color: #1d6553;
   font-weight: bold;
   font-size: clamp(0.4rem, 0.4rem + 1.5vw, 1.1rem);
 }
-.page__hero .section__restaurants .restaurant .article__content span {
+.hero__restaurants .restaurant__content span {
   font-size: clamp(0.9rem, 0.7rem + 1vw, 1.4rem);
 }
 
-.page__footer {
+.footer {
   color: #fff;
 }
-.page__footer .footer__logo {
+.footer__logo {
   font-family: "Shrikhand", cursive;
   font-size: clamp(1rem, 0.9rem + 2vw, 3rem);
 }
-.page__footer .footer__list .footer__item a {
+.footer__list .footer__item a {
   color: inherit;
 }
-.page__footer .footer__list .footer__item .fa-xs {
+.footer__list .footer__item .fa-xs {
   font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1.3rem);
 }
-.page__footer .footer__list .footer__item .fa-utensils {
+.footer__list .footer__item .fa-utensils {
   font-size: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem);
 }
-.page__footer .footer__list .footer__item span {
+.footer__list .footer__item span {
   font-size: clamp(0.7rem, 0.5rem + 1vw, 1.5rem);
 }
 
-.page__footer {
+.footer {
   padding: 5vmin;
   background-color: #353535;
 }
-.page__footer .footer__logo {
+.footer__logo {
   padding: clamp(0.8rem, 0.7rem + 0.7vw, 1.5rem) 0;
 }
 @media (min-width: 768px) {
-  .page__footer .footer__logo {
+  .footer__logo {
     text-align: center;
   }
 }
-.page__footer .footer__list {
+.footer__list {
   list-style-type: none;
   padding: 0;
 }
 @media (min-width: 768px) {
-  .page__footer .footer__list {
+  .footer__list {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     row-gap: 1rem;
     justify-content: space-around;
   }
 }
-.page__footer .footer__list .footer__item {
+.footer__list .footer__item {
   padding: clamp(0.3rem, 0.2rem + 1vw, 0.8rem) 0;
 }
-.page__footer .footer__list .footer__item i {
+.footer__list .footer__item i {
   margin-right: clamp(0.7rem, 0.4rem + 1vw, 1rem);
 }
 
@@ -168,7 +168,7 @@ p {
   position: relative;
 }
 
-.section__header .header__content .header__button {
+.hero__header .header__content .header__button {
   margin: 1.5rem;
   border-radius: clamp(2rem, 2rem + 1vw, 2.5rem);
   border: none;
@@ -176,7 +176,7 @@ p {
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
-.section__header .header__content .header__button:focus, .section__header .header__content .header__button:active, .section__header .header__content .header__button:hover {
+.hero__header .header__content .header__button:focus, .hero__header .header__content .header__button:active, .hero__header .header__content .header__button:hover {
   opacity: 0.85;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
   cursor: pointer;
@@ -239,34 +239,34 @@ p {
 
 /* BODY */
 @media (min-width: 1200px) {
-  .page__hero {
+  .hero {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "form restaurant restaurant" "function restaurant restaurant";
   }
-  .page__hero .section__header {
+  .hero__header {
     grid-area: form;
     padding-top: 3rem;
   }
-  .page__hero .section__operation {
+  .hero .hero__operation {
     display: block;
     grid-area: function;
   }
-  .page__hero .section__operation .function__list {
+  .hero .hero__operation .function__list {
     display: block;
   }
-  .page__hero .section__restaurants {
+  .hero .hero__restaurants {
     grid-area: restaurant;
     grid-column: span 2;
   }
 }
-.page__hero .section__header {
+.hero__header {
   padding-bottom: 20px;
   text-align: center;
   background: #f6f6f6;
 }
-.page__hero .section__header .header__form .form__input {
+.hero__header .header__form .form__input {
   background: #eaeaea;
   display: flex;
   flex-direction: row;
@@ -275,30 +275,30 @@ p {
   gap: clamp(0.5rem, 0.3rem + 1vw, 1rem);
   padding: 0 clamp(0.2rem, 0.5rem + 1vw, 1rem);
 }
-.page__hero .section__header .header__form .form__input .header__input {
+.hero__header .header__form .form__input .header__input {
   width: clamp(100px, 1px + 100vw, 300px);
   border: none;
   outline: none;
   background: none;
   padding: clamp(0.3rem, 0.5rem + 1vw, 1rem) 0;
 }
-.page__hero .section__header .header__form .fa-location-dot {
+.hero__header .header__form .fa-location-dot {
   cursor: pointer;
 }
-.page__hero .section__header .header__content {
+.hero__header .header__content {
   margin: clamp(1rem, 1rem + 2vw, 2rem);
 }
-.page__hero .section__header .header__content .header__paragraph {
+.hero__header .header__content .header__paragraph {
   opacity: 0.6;
 }
-.page__hero .section__operation {
+.hero__operation {
   padding: clamp(1.2rem, 1rem + 2vw, 2.5rem) clamp(1rem, 0.8rem + 2vw, 2.2rem);
 }
-.page__hero .section__operation .function__list {
+.hero__operation .function__list {
   padding: 0 clamp(0.5rem, 0.4rem + 1vw, 1.5rem);
   counter-reset: li;
 }
-.page__hero .section__operation .function__list .function__item {
+.hero__operation .function__list .function__item {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 100%);
@@ -306,10 +306,10 @@ p {
   list-style: none;
   margin: 1rem 0;
 }
-.page__hero .section__operation .function__list .function__item:last-child .function i {
+.hero__operation .function__list .function__item:last-child .function i {
   background-color: #f6f6f6;
 }
-.page__hero .section__operation .function__list .function__item::before {
+.hero__operation .function__list .function__item::before {
   content: counter(li);
   display: block;
   position: absolute;
@@ -321,7 +321,7 @@ p {
   border-radius: 2em;
   background: #9356dc;
 }
-.page__hero .section__operation .function__list .function__item .function {
+.hero__operation .function__list .function__item .function {
   align-self: start;
   display: flex;
   flex-direction: row;
@@ -338,40 +338,40 @@ p {
   box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.8s;
 }
-.page__hero .section__operation .function__list .function__item .function:active, .page__hero .section__operation .function__list .function__item .function:hover {
+.hero__operation .function__list .function__item .function:active, .hero__operation .function__list .function__item .function:hover {
   background: rgba(231, 182, 225, 0.1);
   box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
 }
-.page__hero .section__restaurants {
+.hero__restaurants {
   padding: clamp(1.2rem, 1rem + 2vw, 2.5rem) clamp(1rem, 0.8rem + 2vw, 2.2rem);
   background: #f6f6f6;
 }
 @media (min-width: 768px) {
-  .page__hero .section__restaurants .restaurant__list {
+  .hero__restaurants .restaurant__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
   }
 }
-.page__hero .section__restaurants .restaurant__list .restaurant__item:nth-child(2) .article__img {
+.hero__restaurants .restaurant__list .restaurant__item:nth-child(2) .restaurant__img {
   object-position: 50% 61%;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant {
+.hero__restaurants .restaurant__list .restaurant {
   margin: 20px 0;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
-.page__hero .section__restaurants .restaurant__list .restaurant:hover {
+.hero__restaurants .restaurant__list .restaurant:hover {
   box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.2);
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .nouveau {
+.hero__restaurants .restaurant__list .restaurant .nouveau {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .nouveau .new {
+.hero__restaurants .restaurant__list .restaurant .nouveau .new {
   background: #99e2d0;
   border-radius: 0.3rem;
   align-self: start;
@@ -379,18 +379,18 @@ p {
   margin: clamp(0.4rem, 0.3rem + 1.2vw, 1rem);
   padding: clamp(0.4rem, 0.2rem + 1vw, 0.7rem) clamp(0.3rem, 0.5rem + 0.7vw, 1rem);
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .nouveau .article__img,
-.page__hero .section__restaurants .restaurant__list .restaurant .nouveau .new {
+.hero__restaurants .restaurant__list .restaurant .nouveau .restaurant__img,
+.hero__restaurants .restaurant__list .restaurant .nouveau .new {
   grid-column: 1;
   grid-row: 1;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__img {
+.hero__restaurants .restaurant__list .restaurant__img {
   object-position: right 100%;
   width: 100%;
   aspect-ratio: 2/1;
   border-radius: 1rem 1rem 0 0;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__content {
+.hero__restaurants .restaurant__list .restaurant__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -398,18 +398,18 @@ p {
   gap: 5px;
   padding: clamp(0.5rem, 0.5rem + 1vw, 2rem);
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__content h3 {
+.hero__restaurants .restaurant__list .restaurant__content h3 {
   margin: 0.5rem 0;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__content .heart {
+.hero__restaurants .restaurant__list .restaurant__content .heart {
   cursor: pointer;
   padding: 8px;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__content .heart .heart-svg {
+.hero__restaurants .restaurant__list .restaurant__content .heart .heart-svg {
   overflow: visible;
   width: clamp(1rem, 0.8rem + 3vw, 2.2rem);
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__content .heart .heart-svg .heart-path {
+.hero__restaurants .restaurant__list .restaurant__content .heart .heart-svg .heart-path {
   fill: none;
   stroke: black;
   stroke-width: 10;
@@ -417,7 +417,7 @@ p {
   stroke-dashoffset: 0;
   opacity: 0.5;
 }
-.page__hero .section__restaurants .restaurant__list .restaurant .article__content .heart:active .heart-path, .page__hero .section__restaurants .restaurant__list .restaurant .article__content .heart:hover .heart-path {
+.hero__restaurants .restaurant__list .restaurant__content .heart:active .heart-path, .hero__restaurants .restaurant__list .restaurant__content .heart:hover .heart-path {
   fill: url(#fillGradient);
   animation: fillToTop 2s linear forwards;
 }

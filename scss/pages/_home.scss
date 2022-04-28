@@ -1,7 +1,7 @@
-@use "../utils";
-@use "../base";
-@use "../layouts";
-@use "../components";
+@use '../utils';
+@use '../base';
+@use '../layouts';
+@use '../components';
 /* Header */
 .page__header {
   .header__logo {
@@ -9,31 +9,31 @@
   }
 }
 /* BODY */
-.page__hero {
-  @include utils.respond-to("large") {
+.hero {
+  @include utils.respond-to('large') {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
-      "form restaurant restaurant"
-      "function restaurant restaurant";
-    .section__header {
+      'form restaurant restaurant'
+      'function restaurant restaurant';
+    &__header {
       grid-area: form;
       padding-top: 3rem;
     }
-    .section__operation {
+    .hero__operation {
       display: block;
       grid-area: function;
       .function__list {
         display: block;
       }
     }
-    .section__restaurants {
+    .hero__restaurants {
       grid-area: restaurant;
       grid-column: span 2;
     }
   }
-  .section__header {
+  &__header {
     padding-bottom: 20px;
     text-align: center;
     background: utils.$whiteSmoke;
@@ -62,8 +62,9 @@
       }
     }
   }
-  .section__operation {
-    padding: clamp(1.2rem, 1rem + 2vw, 2.5rem) clamp(1rem, 0.8rem + 2vw, 2.2rem);
+  &__operation {
+    padding: clamp(1.2rem, 1rem + 2vw, 2.5rem)
+      clamp(1rem, 0.8rem + 2vw, 2.2rem);
     .function__list {
       padding: 0 clamp(0.5rem, 0.4rem + 1vw, 1.5rem);
       counter-reset: li;
@@ -93,7 +94,7 @@
         }
         .function {
           align-self: start;
-          @include utils.flex($justify:flex-start);
+          @include utils.flex($justify: flex-start);
           gap: clamp(0.8rem, 0.7rem + 1vw, 2rem);
           width: 100%;
           margin: auto;
@@ -113,17 +114,18 @@
       }
     }
   }
-  .section__restaurants {
-    padding: clamp(1.2rem, 1rem + 2vw, 2.5rem) clamp(1rem, 0.8rem + 2vw, 2.2rem);
+  &__restaurants {
+    padding: clamp(1.2rem, 1rem + 2vw, 2.5rem)
+      clamp(1rem, 0.8rem + 2vw, 2.2rem);
     background: utils.$whiteSmoke;
     .restaurant__list {
-      @include utils.respond-to("small") {
+      @include utils.respond-to('small') {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 2rem;
       }
-      .restaurant__item:nth-child(2) .article__img {
+      .restaurant__item:nth-child(2) .restaurant__img {
         object-position: 50% 61%;
       }
       .restaurant {
@@ -147,20 +149,20 @@
             padding: clamp(0.4rem, 0.2rem + 1vw, 0.7rem)
               clamp(0.3rem, 0.5rem + 0.7vw, 1rem);
           }
-          .article__img,
+          .restaurant__img,
           .new {
             grid-column: 1;
             grid-row: 1;
           }
         }
-        .article__img {
+        &__img {
           object-position: right 100%;
           width: 100%;
           aspect-ratio: 2 / 1;
           border-radius: 1rem 1rem 0 0;
         }
-        .article__content {
-          @include utils.flex($justify:space-between);
+        &__content {
+          @include utils.flex($justify: space-between);
           gap: 5px;
           padding: clamp(0.5rem, 0.5rem + 1vw, 2rem);
           h3 {
