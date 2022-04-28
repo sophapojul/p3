@@ -1,4 +1,4 @@
-node_modules/
+node_modules
 
 # Logs
 logs
@@ -6,7 +6,7 @@ logs
 npm-debug.log*
 
 # Vscode
-.vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -20,11 +20,11 @@ npm-debug.log*
 *.vsix
 
 # Sass
-.sass-cache/
+.sass-cache
 *.sass.map
 *.scss.map
 
-.cache/
+.cache
 
 readme
 

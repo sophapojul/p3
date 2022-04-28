@@ -60,24 +60,6 @@
       .header__paragraph {
         opacity: 0.6;
       }
-      // .header__button {
-      //   @extend %button;
-      //   margin: 1.5rem;
-      //   border-radius: clamp(2rem, 2rem + 1vw, 2.5rem);
-      //   border: none;
-      //   padding: clamp(1rem, 0.9rem + 1vw, 1.5rem);
-      //   background: linear-gradient(utils.$secondary, utils.$primary);
-      //   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-      //   color: utils.$whiteSmoke;
-      //   font-weight: bold;
-      //   font-size: clamp(1rem, 0.8rem + 1vw, 1.3rem);
-      //   &:active,
-      //   &:hover {
-      //     opacity: 0.85;
-      //     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.66);
-      //     cursor: pointer;
-      //   }
-      // }
     }
   }
   .section__operation {
@@ -118,7 +100,6 @@
           padding: 1rem;
           padding-left: clamp(0.8rem, 0.8rem + 2vw, 2rem);
           padding-right: clamp(0.5rem, 0.5rem + 1vw, 0.5rem);
-          // color: rgba(0, 0, 0, 0.66);
           background: utils.$whiteSmoke;
           border-radius: 20px;
           box-shadow: 1px 5px 20px 0 rgba(0, 0, 0, 0.1);
@@ -227,47 +208,3 @@
     }
   }
 }
-// @media screen and (min-width: 768px) {
-//   .page__footer {
-//     .footer__logo {
-//       text-align: center;
-//     }
-//     .footer__list {
-//       display: grid;
-//       grid-template-columns: repeat(2, max-content);
-//       row-gap: 1rem;
-//       justify-content: space-around;
-//       .footer__item {
-//         justify-self: center;
-//         &:nth-child(2) {
-//           grid-row: 2 / 3;
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (min-width: 1200px) {
-//   .page__hero {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-template-rows: repeat(2, auto);
-//     grid-template-areas:
-//       "form restaurant restaurant"
-//       "function restaurant restaurant";
-//     .section__header {
-//       grid-area: form;
-//       padding-top: 3rem;
-//     }
-//     .section__operation {
-//       display: block;
-//       grid-area: function;
-//       .function__list {
-//         display: block;
-//       }
-//     }
-//     .section__restaurants {
-//       grid-area: restaurant;
-//       grid-column: span 2;
-//     }
-//   }
-// }
