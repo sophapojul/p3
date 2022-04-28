@@ -21,14 +21,14 @@
       grid-area: form;
       padding-top: 3rem;
     }
-    .hero__operation {
+    &__operation {
       display: block;
       grid-area: function;
       .function__list {
         display: block;
       }
     }
-    .hero__restaurants {
+    &__restaurants {
       grid-area: restaurant;
       grid-column: span 2;
     }

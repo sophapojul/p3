@@ -5,3 +5,6 @@ $whiteSmoke: #f6f6f6;
 $lightGrey: #f2f2f2;
 $white: #fff;
 $darkGrey: #353535;
+$amount: 5%;
+$lighten-primary: lighten($primary, $amount);
+$lighten-secondary: lighten($secondary, $amount);
