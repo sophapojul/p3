@@ -56,11 +56,11 @@
         justify-content: center;
       }
       h1.menu__heading {
-        width: min-content;
         text-align: center;
         font-family: 'Shrikhand';
         font-weight: 300;
         @include utils.respond-to('large') {
+        width: min-content;
           font-size: 3rem;
           color: white;
           gap: 2rem;

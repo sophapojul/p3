@@ -322,13 +322,13 @@ p {
   }
 }
 .hero__menu .menu__header h1.menu__heading {
-  width: min-content;
   text-align: center;
   font-family: "Shrikhand";
   font-weight: 300;
 }
 @media (min-width: 1200px) {
   .hero__menu .menu__header h1.menu__heading {
+    width: min-content;
     font-size: 3rem;
     color: white;
     gap: 2rem;
