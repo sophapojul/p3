@@ -40,9 +40,7 @@
     .header__form {
       .form__input {
         background: #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include utils.flex;
         gap: clamp(0.5rem, 0.3rem + 1vw, 1rem);
         padding: 0 clamp(0.2rem, 0.5rem + 1vw, 1rem);
         .header__input {
@@ -113,8 +111,7 @@
         }
         .function {
           align-self: start;
-          display: flex;
-          align-items: center;
+          @include utils.flex($justify:flex-start);
           gap: clamp(0.8rem, 0.7rem + 1vw, 2rem);
           width: 100%;
           margin: auto;
@@ -182,9 +179,7 @@
           border-radius: 1rem 1rem 0 0;
         }
         .article__content {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+          @include utils.flex($justify:space-between);
           gap: 5px;
           padding: clamp(0.5rem, 0.5rem + 1vw, 2rem);
           h3 {

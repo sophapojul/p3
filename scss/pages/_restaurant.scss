@@ -5,9 +5,7 @@
 
 /* HEADER */
 .page__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include utils.flex($justify:space-between);
   .fa-arrow-left {
     margin: clamp(0.5rem, 0.3rem + 1.5vw, 2rem);
     font-size: clamp(1rem, 0.5rem + 2vw, 2.2rem);
@@ -53,9 +51,7 @@
       margin: 1rem;
     }
     .menu__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include utils.flex($justify:space-between);
       @include utils.respond-to("large") {
         gap: 2rem;
         justify-content: center;
@@ -143,17 +139,13 @@
         .card__title {
           grid-column: 1;
           grid-row: 1;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          @include utils.ellipsis;
           padding: 1rem 1rem 0;
         }
         .card__content {
           grid-column: 1;
           grid-row: 2;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          @include utils.ellipsis;
           font-size: 1.2rem;
           opacity: 0.6;
           padding: 0 1rem 1rem;

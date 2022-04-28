@@ -235,6 +235,7 @@ p {
 /* HEADER */
 .page__header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -291,6 +292,7 @@ p {
 }
 .page__hero .hero__menu .menu__header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -390,16 +392,16 @@ p {
   grid-column: 1;
   grid-row: 1;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
   padding: 1rem 1rem 0;
 }
 .page__hero .hero__menu .menu__section .section__card .card__content {
   grid-column: 1;
   grid-row: 2;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 1.2rem;
   opacity: 0.6;
   padding: 0 1rem 1rem;
