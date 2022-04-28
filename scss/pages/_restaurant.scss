@@ -56,7 +56,8 @@
         justify-content: center;
       }
       h1.menu__heading {
-        display: inline-block;
+        width: min-content;
+        text-align: center;
         font-family: 'Shrikhand';
         font-weight: 300;
         @include utils.respond-to('large') {
@@ -64,6 +65,9 @@
           color: white;
           gap: 2rem;
           justify-content: center;
+        }
+        span{
+          white-space: nowrap;
         }
       }
       .menu__heart {
@@ -102,7 +106,7 @@
     }
     .menu {
       margin-bottom: 3rem;
-      h2 &__heading {
+      h2.menu__heading {
         opacity: 0.6;
         font-size: 1.2rem;
         font-weight: 100;
@@ -110,9 +114,11 @@
         border-bottom: 3px solid utils.$tertiary;
         width: 3rem;
         padding: 0.3rem 0;
-        margin: 0.8rem 0;
+        margin: 1rem .5rem;
         @include utils.respond-to('large') {
           color: utils.$whiteSmoke;
+          font-size: 1.5rem;
+          margin: 1.5rem .9rem;
         }
       }
       .card {

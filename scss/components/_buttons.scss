@@ -29,18 +29,18 @@
   .menu__submit {
     @extend %button;
     display: block;
-    padding: 1rem clamp(1rem, .9rem + 3vw, 4rem) ;
+    padding: 1rem clamp(1rem, 0.9rem + 3vw, 4rem);
     margin: 0 auto 3rem;
     color: utils.$white;
-    font-size: clamp(.9rem, .7rem + 1.5vw, 2rem);
+    font-size: clamp(0.9rem, 0.7rem + 1.5vw, 2rem);
     font-weight: bold;
     @include utils.respond-to('large') {
       grid-column: 1 / -1;
-      box-shadow: inset 0px 0px 15px 6px rgb(0 0 0 / 90%);
+      box-shadow: 0px 0px 15px 2px rgb(153 226 208 / 90%);
       &:active,
       &:hover {
         opacity: 1;
-        box-shadow: 0 0 15px 5px rgba(255 255 255 / 100%);
+        box-shadow: 0 0 15px 5px rgba(153 226 208 / 100%);
       }
     }
   }
